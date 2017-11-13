@@ -16,3 +16,7 @@ Etat::~Etat() {
 	// TODO Auto-generated destructor stub
 }
 
+void calcule(){
+	etat_effectif = etat_courant + (val_phen - etat_courant) * I_phen + (val_ctrl - etat_courant) * I_ctrl;
+	etat_courant = etat_effectif;
+}

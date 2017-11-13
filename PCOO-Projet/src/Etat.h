@@ -12,9 +12,18 @@ class Etat {
 public:
 	Etat();
 	virtual ~Etat();
-	void store(double);
+	void store_phen(double v){val_phen = v;};
+	void store_ctrl(double v){val_ctrl = v;};
+	double get_valPhen(){return val_phen;};
+	double get_etatCourant(){return etat_courant;};
 private:
-	double temperature;
+	double etat_effectif;
+	double etat_courant;
+	double I_phen;
+	double I_ctrl;
+	double val_phen;
+	double val_ctrl;
+	void calcule();
 };
 
 #endif /* SRC_ETAT_H_ */

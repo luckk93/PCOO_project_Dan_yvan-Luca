@@ -10,8 +10,12 @@
 
 class Controleur {
 public:
-	Controleur();
+	Controleur(Etat*,Serveur*);
 	virtual ~Controleur();
+	void run();
+private:
+	Serveur*serveur;
+	Etat*etat;
 };
 
 #endif /* SRC_CONTROLEUR_H_ */

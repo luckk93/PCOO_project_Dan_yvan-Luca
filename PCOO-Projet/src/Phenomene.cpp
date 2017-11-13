@@ -17,5 +17,9 @@ Phenomene::~Phenomene() {
 }
 
 void Phenomene::run(){
-	etat->store(generate());
+	etat->store_phen(generate());
+}
+
+double Phenomene::generate(){
+	return rand();
 }
