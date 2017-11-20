@@ -19,7 +19,7 @@ public:
 	void store_ctrl(double v){valCtrl = v;};
 	void store_etat(double v){valEtat = v;};
 	void run();
-	void init();
+	void init(){std::cout<<"Server Init\n";};
 private:
 	double valPhen, valCtrl, valEtat;
 	std::string logPath;

@@ -17,5 +17,9 @@ Process::~Process() {
 }
 
 void Process::run(){
-	
+	std::cout << "Run Process\n";
+}
+
+void Process::init(){
+	std::cout << "Init Process\n";
 }

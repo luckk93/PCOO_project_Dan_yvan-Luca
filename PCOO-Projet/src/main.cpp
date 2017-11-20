@@ -13,10 +13,13 @@
 #include "Controleur.h"
 #include "Serveur.h"
 
+using namespace std;
+
 int main(){
-	const double init_temp = 20.0; // Initial temperature
-	const double i_phen = 0.5; // Influence factor from phenomenon to state
-	const double i_ctrl = 0.1; // Influence factor from controller to state
+	const double INIT_TEMP = 20.0; // Initial temperature
+	const double I_PHEN = 0.5; // Influence factor from phenomenon to state
+	const double I_CTRL = 0.1; // Influence factor from controller to state
+	const int NB_TICKS = 50; // Duration of the simulation
 
 	// Declare actors
 	Phenomene phen;
@@ -25,12 +28,22 @@ int main(){
 	Serveur serv;
 
 	// Init the actors
+	cout << "Initialising simulation...\n";
 	phen.init_etat(etat);
-	etat.init_valEtat(20.0);
-	etat.init_factor(i_phen, i_ctrl);
+	etat.init_valEtat(INIT_TEMP);
+	etat.init_factor(I_PHEN, I_CTRL);
 	ctrl.init_etat(&etat);
 	ctrl.init_serveur(&serv);
+	serv.init();
 
+	// Run the simulation
+	cout << "Starting simulation\n";
+	for(int i=0; i<NB_TICKS; i++){
+		phen.run();
+		ctrl.run();
+		etat.run();
+		serv.run();
+	}
 
 	return 0;
 }

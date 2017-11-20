@@ -15,6 +15,7 @@ public:
 	Process();
 	virtual ~Process();
 	virtual void run();
+	virtual void init();
 private:
 	std::string name;
 };
