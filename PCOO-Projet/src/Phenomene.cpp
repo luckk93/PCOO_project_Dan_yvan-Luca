@@ -21,5 +21,5 @@ void Phenomene::run(){
 }
 
 double Phenomene::generate(){
-	return rand();
+	return 20+ ((double)(rand()%1000)/100);
 }
