@@ -8,6 +8,7 @@
 #ifndef SRC_SERVEUR_H_
 #define SRC_SERVEUR_H_
 #include <iostream>
+#include <string>
 #include <fstream>
 
 class Serveur {
@@ -18,9 +19,11 @@ public:
 	void store_ctrl(double v){valCtrl = v;};
 	void store_etat(double v){valEtat = v;};
 	void run();
+	void init();
 private:
-    double valPhen, valCtrl, valEtat;
-    void write_data();
+	double valPhen, valCtrl, valEtat;
+	std::string logPath;
+	void write_data();
 };
 
 #endif /* SRC_SERVEUR_H_ */

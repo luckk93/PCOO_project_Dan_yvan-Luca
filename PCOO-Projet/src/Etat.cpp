@@ -5,8 +5,10 @@
  *      Author: d01000100
  */
 
-#include "Etat.h"
 #include <iostream>
+
+#include "Etat.h"
+
 using namespace std;
 Etat::Etat() {
 	// TODO Auto-generated constructor stub
@@ -23,5 +25,5 @@ void Etat::calcule(){
 }
 
 void Etat::run(){
-    calcule();
+	calcule();
 }

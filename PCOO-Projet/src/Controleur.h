@@ -20,10 +20,11 @@ public:
 private:
 	Serveur*serveur;
 	Etat*etat;
-	double valPhen, valEtat, valCtrl;
+	double valPhen, valEtat, valCtrl, valSat;
 	void send_valPhen();
 	void send_valEtat();
 	void send_valCtrl();
+	void compute_valCtrl();
 };
 
 #endif /* SRC_CONTROLEUR_H_ */

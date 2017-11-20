@@ -10,16 +10,18 @@
 
 
 #include <cstdlib>
+
+#include "Process.h"
 #include "Etat.h"
 
-class Phenomene {
+class Phenomene:Process{
 public:
 	Phenomene();
 	virtual ~Phenomene();
 	void run();
-	void init_etat(Etat*e){etat = e;};
+	void init_etat(Etat&e){etat = e;};
 private:
-	Etat*etat;
+	Etat etat;
 	double generate();
 };
 

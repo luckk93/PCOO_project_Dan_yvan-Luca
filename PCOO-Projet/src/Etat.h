@@ -13,7 +13,7 @@ public:
 	Etat();
 	virtual ~Etat();
 	void init_valEtat(double v){etat_courant=v;};
-	void init_factor(double q1, double q2){I_phen=q1; I_ctrl=q2;};
+	void init_factor(double iPhen, double iCtrl){I_phen=iPhen; I_ctrl=iCtrl;};
 	void store_phen(double v){val_phen = v;};
 	void store_ctrl(double v){val_ctrl = v;};
 	double get_valPhen(){return val_phen;};

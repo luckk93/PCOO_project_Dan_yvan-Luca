@@ -7,17 +7,14 @@
 
 #include "Phenomene.h"
 
-Phenomene::Phenomene() {
-	// TODO Auto-generated constructor stub
-
+Phenomene::Phenomene(){
 }
 
-Phenomene::~Phenomene() {
-	// TODO Auto-generated destructor stub
+Phenomene::~Phenomene(){
 }
 
 void Phenomene::run(){
-	etat->store_phen(generate());
+	etat.store_phen(generate());
 }
 
 double Phenomene::generate(){
