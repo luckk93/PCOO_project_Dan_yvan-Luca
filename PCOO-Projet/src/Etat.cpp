@@ -11,12 +11,9 @@
 
 using namespace std;
 Etat::Etat() {
-	// TODO Auto-generated constructor stub
-
 }
 
 Etat::~Etat() {
-	// TODO Auto-generated destructor stub
 }
 
 void Etat::calcule(){
@@ -26,4 +23,10 @@ void Etat::calcule(){
 
 void Etat::run(){
 	calcule();
+}
+
+void Etat::init(double e, double p, double c){
+	etat_courant = e;
+	I_phen = p;
+	I_ctrl = c;
 }

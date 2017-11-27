@@ -10,19 +10,24 @@
 
 
 #include <cstdlib>
+#include <time.h>
+
 
 #include "Process.h"
 #include "Etat.h"
 
-class Phenomene:Process{
+class Phenomene: public Process{
 public:
 	Phenomene();
 	virtual ~Phenomene();
-	void run();
-	void init_etat(Etat&e){etat = e;};
+	virtual void run();
+	virtual void init(Etat*e,double min,double max);
+	// void init(Etat*e){etat = e;};
 private:
-	Etat etat;
+	Etat *etat;
 	double generate();
+	double valMin;
+	double valMax;
 };
 
 #endif /* SRC_PHENOMENE_H_ */

@@ -7,13 +7,13 @@
 
 #include "Controleur.h"
 
-Controleur::Controleur() {
-	// TODO Auto-generated constructor stub
+#include <iostream>
+using namespace std;
 
+Controleur::Controleur() {
 }
 
 Controleur::~Controleur() {
-	// TODO Auto-generated destructor stub
 }
 
 void Controleur::run(){
@@ -34,17 +34,22 @@ void Controleur::send_valEtat(){
 }
 
 void Controleur::send_valCtrl(){
-	// valCtrl=valEtat;
 	serveur->store_ctrl(valCtrl);
 	etat->store_ctrl(valCtrl);
 }
 
 void Controleur::compute_valCtrl(){
 	// On/Off controller
-	if(valEtat > valSat){
+	if(valPhen > valSat){
 		valCtrl = valSat;
 	}
 	else{
 		valCtrl = valPhen;
 	}
+}
+
+void Controleur::init(Etat*e,Serveur*s,double sat){
+	etat = e;
+	serveur = s;
+	valSat = sat;
 }

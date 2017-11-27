@@ -7,18 +7,28 @@
 
 #include "Simulator.h"
 
-Simulator::Simulator() {
-	// TODO Auto-generated constructor stub
 
+Simulator::Simulator() {
 }
 
 Simulator::~Simulator() {
-	// TODO Auto-generated destructor stub
 }
 
 void Simulator::tick(){
-	for(Process&p : processes){
-		p.run();
-		ticks++;
+	for(Process*p : processes){
+		p->run();
 	}
+}
+
+void Simulator::init(){
+}
+
+void Simulator::simulate(int tick_nbr){
+	init();
+	for(int i=0; i<tick_nbr; i++)
+		tick();
+}
+
+void Simulator::init_process(std::vector<Process*>* elements){
+	processes=*elements;
 }

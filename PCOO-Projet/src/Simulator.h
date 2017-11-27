@@ -16,10 +16,13 @@ class Simulator {
 public:
 	Simulator();
 	virtual ~Simulator();
-	void tick();
+	void simulate(int);
+	void init_process(std::vector<Process*>* elements);
 private:
-	std::vector<Process> processes;
-	int ticks;
+	std::vector<Process*> processes;
+	void tick();
+	void init();
+
 };
 
 #endif /* SRC_SIMULATOR_H_ */

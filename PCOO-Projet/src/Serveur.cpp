@@ -9,26 +9,56 @@
 
 using namespace std;
 
-Serveur::Serveur() {
-	// TODO Auto-generated constructor stub
-
+Serveur::Serveur():tick(0){
 }
 
 Serveur::~Serveur() {
-	// TODO Auto-generated destructor stub
 }
 
 void Serveur::run(){
 		write_data();
+		tick++;
 }
 
 void Serveur::write_data(){
-	cout << "Phen: " << valPhen << "\t" ;
-	cout << "Etat: " << valEtat << "\t" ;
-	cout << "Ctrl: " << valCtrl << endl ;
+	cout << left <<  "Tick: "  << setw(5) << tick << "\t" ;
+	cout << left <<  "Phen: "  << setw(5) << valPhen << "\t" ;
+	cout << left <<  "Etat: "  << setw(5) << valEtat << "\t" ;
+	cout << left <<  "Ctrl: "  << setw(5) << valCtrl << endl ;
 
 	ofstream data_storage;
-	data_storage.open("PCOO_data.txt", ios::out | ios::app | ios::binary);
+	data_storage.open("waveforms.dat", ios::out | ios::app | ios::binary);
 	data_storage << valPhen << "\t" << valEtat << "\t" <<valCtrl << endl;
 	data_storage.close();
+
+	ofstream log_storage;
+	log_storage.open("journal.log", ios::out | ios::app | ios::binary);
+	log_storage << "Tick: " << tick << "\t" ;
+	log_storage << "Phen: " << valPhen << "\t" ;
+	log_storage << "Etat: " << valEtat << "\t" ;
+	log_storage << "Ctrl: " << valCtrl << endl ;
+	log_storage.close();	
+}
+
+void Serveur::init(){
+	tick = 0;
+	ofstream data_storage;
+	data_storage.open("waveforms.dat", ios::out | ios::trunc | ios::binary);
+	data_storage.close();
+
+	data_storage.open("waveforms.dat", ios::out | ios::app | ios::binary);
+	data_storage << "valPhen" << "\t" << "valEtat" << "\t" <<"valCtrl" << endl;
+	data_storage.close();	
+
+	ofstream log_storage;
+	log_storage.open("journal.log", ios::out | ios::trunc | ios::binary);
+	log_storage.close();
+}
+
+void Serveur::log(string s){
+	ofstream log_storage;
+	log_storage.open("journal.log", ios::out | ios::app | ios::binary);
+	log_storage << s;
+	log_storage.close();
+	cout << s;	
 }

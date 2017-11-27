@@ -7,8 +7,9 @@
 
 #ifndef SRC_ETAT_H_
 #define SRC_ETAT_H_
+#include "Process.h"
 
-class Etat {
+class Etat: public Process {
 public:
 	Etat();
 	virtual ~Etat();
@@ -18,7 +19,9 @@ public:
 	void store_ctrl(double v){val_ctrl = v;};
 	double get_valPhen(){return val_phen;};
 	double get_etatCourant(){return etat_courant;};
-	void run();
+	virtual void run();
+	virtual void init(double e, double p, double c);
+	// virtual void init();
 private:
 	double etat_effectif;
 	double etat_courant;

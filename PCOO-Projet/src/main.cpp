@@ -12,38 +12,57 @@
 #include "Etat.h"
 #include "Controleur.h"
 #include "Serveur.h"
+#include "Process.h"
+#include <vector>
+#include "Simulator.h"
 
 using namespace std;
 
 int main(){
 	const double INIT_TEMP = 20.0; // Initial temperature
-	const double I_PHEN = 0.5; // Influence factor from phenomenon to state
-	const double I_CTRL = 0.1; // Influence factor from controller to state
-	const int NB_TICKS = 50; // Duration of the simulation
+	const double I_PHEN = 0.1; // Influence factor from phenomenon to state
+	const double I_CTRL = 0.8; // Influence factor from controller to state
+	const int NB_TICKS = 25; // Duration of the simulation
+	const double CTRL_SAT = 24.0; // Saturation value of the controller
+	const double VAL_MIN = 20; // Minimum value of the phenomenon 
+	const double VAL_MAX = 30; // Maximum value of the phenomenon
 
-	// Declare actors
-	Phenomene phen;
-	Etat etat;
-	Controleur ctrl;
+	// Create and init the  server
 	Serveur serv;
-
-	// Init the actors
-	cout << "Initialising simulation...\n";
-	phen.init_etat(etat);
-	etat.init_valEtat(INIT_TEMP);
-	etat.init_factor(I_PHEN, I_CTRL);
-	ctrl.init_etat(&etat);
-	ctrl.init_serveur(&serv);
 	serv.init();
+	serv.log("Server created and Initialised.\n");
+	
+	// Declare actors
+	Etat etat;
+	etat.init(INIT_TEMP,I_PHEN,I_CTRL);
+	serv.log("Etat created and Initialised...\n");
+
+	Phenomene phen;
+	phen.init(&etat,VAL_MIN,VAL_MAX);
+	serv.log("Phenomene created and Initialised...\n");
+
+	Controleur ctrl;
+	ctrl.init(&etat,&serv,CTRL_SAT);
+	serv.log("Controller created and Initialised...\n");
+
+	vector<Process*> elements;
+	elements.push_back(&phen);
+	elements.push_back(&ctrl);
+	elements.push_back(&etat);
+	elements.push_back(&serv);
 
 	// Run the simulation
-	cout << "Starting simulation\n";
-	for(int i=0; i<NB_TICKS; i++){
-		phen.run();
-		ctrl.run();
-		etat.run();
-		serv.run();
-	}
+	// cout << "Starting simulation\n";
+	serv.log("Starting simulation\n");
+	Simulator mySimulator;
+	mySimulator.init_process(&elements);
+	mySimulator.simulate(50);
+	serv.log("End simulation...\n");
+
+	// Plot the output
+	serv.log("Plotting output with gnuplot\n");
+	system("gnuplot ../plot.sh");
+
 
 	return 0;
 }

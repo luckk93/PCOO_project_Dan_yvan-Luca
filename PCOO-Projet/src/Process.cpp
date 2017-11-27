@@ -8,12 +8,9 @@
 #include "Process.h"
 
 Process::Process() {
-	// TODO Auto-generated constructor stub
-
 }
 
 Process::~Process() {
-	// TODO Auto-generated destructor stub
 }
 
 void Process::run(){

@@ -10,13 +10,15 @@
 #include "Etat.h"
 #include "Serveur.h"
 
-class Controleur {
+class Controleur: public Process {
 public:
 	Controleur();
 	virtual ~Controleur();
-	void run();
+	virtual void run();
+	virtual void init(Etat*,Serveur*,double);
 	void init_etat(Etat*e){etat = e;};
 	void init_serveur(Serveur*s){serveur = s;};
+	void init_sat(double s){valSat=s;};
 private:
 	Serveur*serveur;
 	Etat*etat;
