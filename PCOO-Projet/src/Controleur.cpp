@@ -34,7 +34,7 @@ void Controleur::send_valEtat(){
 }
 
 void Controleur::send_valCtrl(){
-	valCtrl=valEtat;
+	// valCtrl=valEtat;
 	serveur->store_ctrl(valCtrl);
 	etat->store_ctrl(valCtrl);
 }
