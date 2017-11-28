@@ -1,0 +1,17 @@
+/*
+ * Phenomene.h
+ *
+ *  Created on: Nov 13, 2017
+ *      Author: d01000100
+ */
+
+#ifndef SRC_PHENOMENE_H_
+#define SRC_PHENOMENE_H_
+
+class Phenomene {
+public:
+	Phenomene();
+	virtual ~Phenomene();
+};
+
+#endif /* SRC_PHENOMENE_H_ */

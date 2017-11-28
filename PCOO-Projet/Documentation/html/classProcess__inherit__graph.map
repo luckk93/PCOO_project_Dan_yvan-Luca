@@ -1,0 +1,6 @@
+<map id="Process" name="Process">
+<area shape="rect" id="node2" href="$classControleur.html" title="{Controleur\n|&#45; serveur\l&#45; etat\l&#45; valPhen\l&#45; valEtat\l&#45; valCtrl\l&#45; valSat\l|+ Controleur()\l+ ~Controleur()\l+ run()\l+ init()\l&#45; send_valPhen()\l&#45; send_valEtat()\l&#45; send_valCtrl()\l&#45; compute_valCtrl()\l}" alt="" coords="5,182,139,435"/>
+<area shape="rect" id="node3" href="$classEtat.html" title="{Etat\n|&#45; etat_effectif\l&#45; etat_courant\l&#45; I_phen\l&#45; I_ctrl\l&#45; val_phen\l&#45; val_ctrl\l|+ Etat()\l+ ~Etat()\l+ store_phen()\l+ store_ctrl()\l+ get_valPhen()\l+ get_etatCourant()\l+ run()\l+ init()\l&#45; calcule()\l}" alt="" coords="163,175,298,443"/>
+<area shape="rect" id="node4" href="$classPhenomene.html" title="{Phenomene\n|&#45; etat\l&#45; valMin\l&#45; valMax\l|+ Phenomene()\l+ ~Phenomene()\l+ run()\l+ init()\l&#45; generate()\l}" alt="" coords="322,226,441,391"/>
+<area shape="rect" id="node5" href="$classServeur.html" title="{Serveur\n|&#45; valPhen\l&#45; valCtrl\l&#45; valEtat\l&#45; logPath\l&#45; tick\l|+ Serveur()\l+ ~Serveur()\l+ store_phen()\l+ store_ctrl()\l+ store_etat()\l+ log()\l+ run()\l+ init()\l&#45; write_data()\l}" alt="" coords="465,182,572,435"/>
+</map>

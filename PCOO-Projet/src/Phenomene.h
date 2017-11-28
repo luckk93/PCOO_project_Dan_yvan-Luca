@@ -22,7 +22,6 @@ public:
 	virtual ~Phenomene();
 	virtual void run();
 	virtual void init(Etat*e,double min,double max);
-	// void init(Etat*e){etat = e;};
 private:
 	Etat *etat;
 	double generate();

@@ -18,7 +18,7 @@ int main(){
 	const double INIT_TEMP = 20.0; // Initial temperature
 	const double I_PHEN = 0.1; // Influence factor from phenomenon to state
 	const double I_CTRL = 0.8; // Influence factor from controller to state
-	const int NB_TICKS = 25; // Duration of the simulation
+	const int NB_TICKS = 50; // Duration of the simulation
 	const double CTRL_SAT = 24.0; // Saturation value of the controller
 	const double VAL_MIN = 20; // Minimum value of the phenomenon 
 	const double VAL_MAX = 30; // Maximum value of the phenomenon
@@ -48,11 +48,10 @@ int main(){
 	elements.push_back(&serv);
 
 	// Run the simulation
-	// cout << "Starting simulation\n";
 	serv.log("Starting simulation\n");
 	Simulator mySimulator;
 	mySimulator.init_process(&elements);
-	mySimulator.simulate(50);
+	mySimulator.simulate(NB_TICKS);
 	serv.log("End simulation...\n");
 
 	// Plot the output

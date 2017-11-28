@@ -7,7 +7,6 @@
 
 #include "Controleur.h"
 
-#include <iostream>
 using namespace std;
 
 Controleur::Controleur() {

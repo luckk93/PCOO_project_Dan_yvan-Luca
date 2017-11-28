@@ -26,7 +26,6 @@ private:
 	std::vector<Process*> processes;
 	void tick();
 	void init();
-
 };
 
 #endif /* SRC_SIMULATOR_H_ */

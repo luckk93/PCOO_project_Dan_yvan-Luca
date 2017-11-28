@@ -1,0 +1,22 @@
+/*
+ * Phenomene.h
+ *
+ *  Created on: Nov 13, 2017
+ *      Author: d01000100
+ */
+
+#ifndef SRC_PHENOMENE_H_
+#define SRC_PHENOMENE_H_
+
+#include "Etat."
+
+class Phenomene {
+public:
+	Phenomene();
+	virtual ~Phenomene();
+	double generate();
+private:
+	Etat*etat;
+};
+
+#endif /* SRC_PHENOMENE_H_ */

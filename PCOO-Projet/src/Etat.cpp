@@ -5,8 +5,6 @@
  *      Author: d01000100
  */
 
-#include <iostream>
-
 #include "Etat.h"
 
 using namespace std;

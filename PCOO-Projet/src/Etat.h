@@ -7,21 +7,21 @@
 
 #ifndef SRC_ETAT_H_
 #define SRC_ETAT_H_
+
+#include <iostream>
+
 #include "Process.h"
 
 class Etat: public Process {
 public:
 	Etat();
 	virtual ~Etat();
-	void init_valEtat(double v){etat_courant=v;};
-	void init_factor(double iPhen, double iCtrl){I_phen=iPhen; I_ctrl=iCtrl;};
 	void store_phen(double v){val_phen = v;};
 	void store_ctrl(double v){val_ctrl = v;};
 	double get_valPhen(){return val_phen;};
 	double get_etatCourant(){return etat_courant;};
 	virtual void run();
 	virtual void init(double e, double p, double c);
-	// virtual void init();
 private:
 	double etat_effectif;
 	double etat_courant;

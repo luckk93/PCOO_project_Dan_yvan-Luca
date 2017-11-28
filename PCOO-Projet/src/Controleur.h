@@ -7,6 +7,9 @@
 
 #ifndef SRC_CONTROLEUR_H_
 #define SRC_CONTROLEUR_H_
+
+#include <iostream>
+
 #include "Etat.h"
 #include "Serveur.h"
 
@@ -16,9 +19,6 @@ public:
 	virtual ~Controleur();
 	virtual void run();
 	virtual void init(Etat*,Serveur*,double);
-	void init_etat(Etat*e){etat = e;};
-	void init_serveur(Serveur*s){serveur = s;};
-	void init_sat(double s){valSat=s;};
 private:
 	Serveur*serveur;
 	Etat*etat;
