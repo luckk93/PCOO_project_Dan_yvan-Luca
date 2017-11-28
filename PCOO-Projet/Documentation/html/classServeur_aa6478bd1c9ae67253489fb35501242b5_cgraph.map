@@ -1,6 +1,0 @@
-<map id="Serveur::store_etat" name="Serveur::store_etat">
-<area shape="rect" id="node2" href="$classServeur.html#ac929e23aa292b5e8e4c0d25fd71f8972" title="Serveur::log" alt="" coords="187,5,279,32"/>
-<area shape="rect" id="node3" href="$classServeur.html#aa7a564b667131f17435da92988b63d2d" title="Serveur::run" alt="" coords="187,56,280,83"/>
-<area shape="rect" id="node5" href="$classServeur.html#a490401612b2509ea7c4a115ee5344858" title="Serveur::init" alt="" coords="187,107,279,133"/>
-<area shape="rect" id="node4" href="$classServeur.html#afc4a3b0b3cae3de18e8a870fc7f06192" title="Serveur::write_data" alt="" coords="328,56,463,83"/>
-</map>
