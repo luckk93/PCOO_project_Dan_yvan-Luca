@@ -10,6 +10,10 @@
 
 #include <vector>
 
+#include "Phenomene.h"
+#include "Etat.h"
+#include "Controleur.h"
+#include "Serveur.h"
 #include "Process.h"
 
 class Simulator {

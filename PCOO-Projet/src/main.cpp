@@ -7,13 +7,9 @@
 
 #include <iostream>
 #include <string>
-
-#include "Phenomene.h"
-#include "Etat.h"
-#include "Controleur.h"
-#include "Serveur.h"
-#include "Process.h"
 #include <vector>
+
+#include "Process.h"
 #include "Simulator.h"
 
 using namespace std;
