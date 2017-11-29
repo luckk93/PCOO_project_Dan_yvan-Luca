@@ -16,6 +16,7 @@ Controleur::~Controleur() {
 }
 
 void Controleur::run(){
+	serveur->log("Controller running...\n");
 	send_valPhen();
 	send_valEtat();
 	compute_valCtrl();
@@ -51,4 +52,5 @@ void Controleur::init(Etat*e,Serveur*s,double sat){
 	etat = e;
 	serveur = s;
 	valSat = sat;
+	serveur->log("Controller initialized...\n");
 }

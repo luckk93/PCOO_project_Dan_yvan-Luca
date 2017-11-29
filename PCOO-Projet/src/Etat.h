@@ -11,6 +11,7 @@
 #include <iostream>
 
 #include "Process.h"
+#include "Serveur.h"
 
 class Etat: public Process {
 public:
@@ -21,8 +22,9 @@ public:
 	double get_valPhen(){return val_phen;};
 	double get_etatCourant(){return etat_courant;};
 	virtual void run();
-	virtual void init(double e, double p, double c);
+	virtual void init(double e, double p, double c,Serveur*s);
 private:
+	Serveur*serveur;
 	double etat_effectif;
 	double etat_courant;
 	double I_phen;

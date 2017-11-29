@@ -30,11 +30,11 @@ int main(){
 	
 	// Declare actors
 	Etat etat;
-	etat.init(INIT_TEMP,I_PHEN,I_CTRL);
+	etat.init(INIT_TEMP,I_PHEN,I_CTRL,&serv);
 	serv.log("Etat created and Initialised...\n");
 
 	Phenomene phen;
-	phen.init(&etat,VAL_MIN,VAL_MAX);
+	phen.init(&etat,VAL_MIN,VAL_MAX,&serv);
 	serv.log("Phenomene created and Initialised...\n");
 
 	Controleur ctrl;

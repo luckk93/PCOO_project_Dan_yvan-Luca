@@ -16,8 +16,9 @@ Serveur::~Serveur() {
 }
 
 void Serveur::run(){
-		write_data();
-		tick++;
+	this->log("Server running...\n");
+	write_data();
+	tick++;
 }
 
 void Serveur::write_data(){
@@ -53,6 +54,8 @@ void Serveur::init(){
 	ofstream log_storage;
 	log_storage.open("journal.log", ios::out | ios::trunc | ios::binary);
 	log_storage.close();
+
+	this->log("Server initialized...\n");
 }
 
 void Serveur::log(string s){

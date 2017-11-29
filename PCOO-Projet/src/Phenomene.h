@@ -21,8 +21,9 @@ public:
 	Phenomene();
 	virtual ~Phenomene();
 	virtual void run();
-	virtual void init(Etat*e,double min,double max);
+	virtual void init(Etat*e,double min,double max,Serveur*s);
 private:
+	Serveur*serveur;
 	Etat *etat;
 	double generate();
 	double valMin;
