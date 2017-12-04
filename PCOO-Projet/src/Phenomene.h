@@ -26,6 +26,9 @@ public:
 	virtual void run();
 	virtual void init(Etat*e,double min,double max,Serveur*s);
 private:
+	double generateSin();
+	double generateRand();
+	double generateImp();
 	Serveur*serveur;
 	Etat *etat;
 	double generate();
@@ -38,7 +41,7 @@ private:
 	double offs =0;
 	double ampl =1;
 	long int phase=0;
-	long int period=10;
+	// long int period=10;
 	double sat_max =50;
 	double sat_min = -50;
 	

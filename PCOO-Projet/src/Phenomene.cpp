@@ -27,9 +27,10 @@ double Phenomene::generate(){
 			break;
 		case 2 : return generateImp();
 			break;
-		default;
+		default:
+			break;
 		}
-	}
+}
 
 
 double Phenomene::generateRand(){
@@ -38,8 +39,8 @@ double Phenomene::generateRand(){
 
 
 double Phenomene::generateSin(){
-		double sin_point = offs + ampl * sin(2*PI(tick+phase)/period);
-		double wave point = (sin_point + generateRand);
+		double sin_point = offs + ampl * sin(2*PI*(tick+phase)/period);
+		double wave_point = (sin_point + generateRand());
 		if(wave_point > sat_max) wave_point= sat_max;
 		else if (wave_point < sat_min) wave_point = sat_min;
 		return wave_point;
@@ -54,9 +55,9 @@ double Phenomene::generateImp(){
 	else if(period_tick <= t_rise) imp_point = ((v_high-v_low)/t_rise)*tick;
 	if(period_tick < (t_rise+pwidth)) imp_point = v_high;
 	if(period_tick < (t_rise+pwidth+t_fall)) imp_point = ((v_low-v_high)/t_fall)*(tick-(t_rise+pwidth));
-	else(period_tick < 0) imp_point = v_low;
+	else imp_point = v_low;
 
-	double wave point = (imp_point + generateRand);
+	double wave_point = (imp_point + generateRand());
 	if(wave_point > sat_max) wave_point= sat_max;
 	else if (wave_point < sat_min) wave_point = sat_min;
 	return wave_point;

@@ -23,7 +23,7 @@ public:
 	void simulate(int);
 	void init_process(std::vector<Process*>* elements);
 private:
-	std::vector<Process*> processes;
+	std::vector<Process*>* processes;
 	void tick();
 	void init();
 };

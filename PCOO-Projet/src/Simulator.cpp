@@ -15,7 +15,7 @@ Simulator::~Simulator() {
 }
 
 void Simulator::tick(){
-	for(Process*p : processes){
+	for(Process*p : *processes){
 		p->run();
 	}
 }
@@ -30,5 +30,5 @@ void Simulator::simulate(int tick_nbr){
 }
 
 void Simulator::init_process(std::vector<Process*>* elements){
-	processes=*elements;
+	processes=elements;
 }

@@ -1,5 +1,10 @@
-16:32:38 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+11:39:47 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
 g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
@@ -11,5 +16,5 @@ g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/Etat.o ./src/Phenomene.o ./src/P
 Finished building target: PCOO-Projet
  
 
-16:32:38 Build Finished (took 362ms)
+11:39:48 Build Finished (took 761ms)
 
