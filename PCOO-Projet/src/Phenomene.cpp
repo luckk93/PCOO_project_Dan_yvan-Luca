@@ -62,6 +62,7 @@ double Phenomene::generateImp(){
 	else if (wave_point < sat_min) wave_point = sat_min;
 	return wave_point;
 }
+
 void Phenomene::init(Etat*e,double min,double max,Serveur*s){
 	etat = e;
 	srand(time(0));

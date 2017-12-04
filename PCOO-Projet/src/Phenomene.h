@@ -26,12 +26,9 @@ public:
 	virtual void run();
 	virtual void init(Etat*e,double min,double max,Serveur*s);
 private:
-	double generateSin();
-	double generateRand();
-	double generateImp();
 	Serveur*serveur;
 	Etat *etat;
-	double generate();
+	virtual double generate();
 	double valMin;
 	double valMax;
 	
