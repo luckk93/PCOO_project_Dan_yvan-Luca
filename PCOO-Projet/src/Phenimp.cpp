@@ -23,7 +23,8 @@ double Phen_imp::generate(){
 	if(period_tick < (t_rise+pwidth+t_fall)) imp_point = ((v_low-v_high)/t_fall)*(tick-(t_rise+pwidth));
 	else imp_point = v_low;
 
-	double wave_point = (imp_point + generateRand());
+	//double wave_point = (imp_point + generateRand()); 
+	double wave_point = (imp_point); // Debug
 	if(wave_point > sat_max) wave_point= sat_max;
 	else if (wave_point < sat_min) wave_point = sat_min;
 	return wave_point;

@@ -14,8 +14,8 @@ class Process {
 public:
 	Process();
 	virtual ~Process();
-	virtual void run();
-	virtual void init();
+	virtual void run() = 0;
+	// virtual void init() = 0;
 private:
 	std::string name;
 };

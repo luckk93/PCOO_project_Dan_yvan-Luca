@@ -13,7 +13,7 @@
 #include "Etat.h"
 #include "Serveur.h"
 
-class Controleur: public Process {
+class Controleur: virtual public Process {
 public:
 	Controleur();
 	virtual ~Controleur();

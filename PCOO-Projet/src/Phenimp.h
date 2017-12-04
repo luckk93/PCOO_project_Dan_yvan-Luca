@@ -14,6 +14,9 @@ public:
 	virtual ~Phen_imp();
 private:
 	double generate();
+	long long int tick=0;
+	double sat_max =50;
+	double sat_min = -50;
 	double v_low =0;
 	double v_high = 10;
 	long int t_del= 3;

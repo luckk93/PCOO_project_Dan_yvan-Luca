@@ -13,7 +13,7 @@
 #include "Process.h"
 #include "Serveur.h"
 
-class Etat: public Process {
+class Etat: virtual public Process {
 public:
 	Etat();
 	virtual ~Etat();

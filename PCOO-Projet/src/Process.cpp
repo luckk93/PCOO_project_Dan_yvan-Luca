@@ -13,10 +13,8 @@ Process::Process() {
 Process::~Process() {
 }
 
-void Process::run(){
-	std::cout << "Run Process\n";
-}
+// void Process::run(){
+// }
 
-void Process::init(){
-	std::cout << "Init Process\n";
-}
+// void Process::init(){
+// }

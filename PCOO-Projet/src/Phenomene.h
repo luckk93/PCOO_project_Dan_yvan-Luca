@@ -22,13 +22,16 @@
 class Phenomene: public Process{
 public:
 	Phenomene();
-	virtual ~Phenomene();
-	virtual void run();
-	virtual void init(Etat*e,double min,double max,Serveur*s);
-private:
+	~Phenomene();
+	void run()override;
+	void init(Etat*e,double min,double max,Serveur*s);
+protected:
+	double generateImp();
+	double generateSin();
+	double generateRand();
 	Serveur*serveur;
 	Etat *etat;
-	virtual double generate();
+	double generate();
 	double valMin;
 	double valMax;
 	

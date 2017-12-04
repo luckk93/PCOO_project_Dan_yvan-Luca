@@ -23,6 +23,8 @@ int main(){
 	const double VAL_MIN = 20; // Minimum value of the phenomenon 
 	const double VAL_MAX = 30; // Maximum value of the phenomenon
 
+	//Process p;
+
 	// Create and init the  server
 	Serveur serv;
 	serv.init();
@@ -56,7 +58,7 @@ int main(){
 
 	// Plot the output
 	serv.log("Plotting output with gnuplot\n");
-	system("gnuplot ../plot.sh");
+	// system("gnuplot ../plot.sh");
 
 
 	return 0;

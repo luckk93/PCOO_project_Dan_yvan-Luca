@@ -29,7 +29,8 @@ double Phenomene::generate(){
 			break;
 		default:
 			break;
-		}
+	}
+	return 0;
 }
 
 

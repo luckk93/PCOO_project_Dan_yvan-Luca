@@ -8,7 +8,9 @@
 #ifndef SRC_PHENRAND_H_
 #define SRC_PHENRAND_H_
 
-class Phen_rand: public Phenomene {
+#include "Phenomene.h"
+
+class Phen_rand: virtual public Phenomene {
 public:
 	Phen_rand();
 	virtual ~Phen_rand();

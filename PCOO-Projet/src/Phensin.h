@@ -8,7 +8,9 @@
 #ifndef SRC_PHENSIN_H_
 #define SRC_PHENSIN_H_
 
-class Phen_sin {
+#include "Phenomene.h"
+
+class Phen_sin : Phenomene {
 public:
 	Phen_sin();
 	virtual ~Phen_sin();
