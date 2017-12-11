@@ -11,11 +11,12 @@ using namespace std;
 Etat::Etat() {
 }
 
-Etat::Etat(double e, double p, double c, Serveur*s){
+Etat::Etat(string n, double e, double p, double c, Serveur*s){
 	etat_courant = e;
 	I_phen = p;
 	I_ctrl = c;
 	serveur = s;
+	name = n;
 	serveur->log("Etat initialized...\n");
 }
 
