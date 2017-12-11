@@ -67,7 +67,7 @@ int main(){
 
 	Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX);
 
-	Phen_sin phens(&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
+	Phen_sin phens("Phen sin",&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
                 VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX);
 
     Phen_imp pheni("Phen imp",&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
