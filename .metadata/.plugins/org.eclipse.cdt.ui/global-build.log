@@ -2690,3 +2690,323 @@ Finished building target: PCOO-Projet
 12:41:35 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
 make: Nothing to be done for 'all'.
+12:45:16 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+12:46:17 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+./src/ControleurOnOff.o: In function `ContrOnOff::ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:12: undefined reference to `Controleur::Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::ContrOnOff(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::Controleur()'
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+makefile:45: recipe for target 'PCOO-Projet' failed
+./src/ControleurOnOff.o:(.rodata._ZTC10ContrOnOff40_10Controleur[_ZTV10ContrOnOff]+0x10): undefined reference to `typeinfo for Controleur'
+./src/ControleurOnOff.o:(.rodata._ZTC10ContrOnOff40_10Controleur[_ZTV10ContrOnOff]+0x50): undefined reference to `typeinfo for Controleur'
+./src/ControleurOnOff.o:(.rodata._ZTI10ContrOnOff[_ZTI10ContrOnOff]+0x18): undefined reference to `typeinfo for Controleur'
+./src/ControleurP.o: In function `ContrP::ContrP(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::Controleur()'
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::~ContrP()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::~ContrP()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o:(.rodata._ZTC6ContrP32_10Controleur[_ZTV6ContrP]+0x10): undefined reference to `typeinfo for Controleur'
+./src/ControleurP.o:(.rodata._ZTC6ContrP32_10Controleur[_ZTV6ContrP]+0x50): undefined reference to `typeinfo for Controleur'
+./src/ControleurP.o:(.rodata._ZTI6ContrP[_ZTI6ContrP]+0x18): undefined reference to `typeinfo for Controleur'
+./src/ControleurSat.o: In function `ContrSat::ContrSat()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:12: undefined reference to `Controleur::Controleur()'
+./src/ControleurSat.o: In function `ContrSat::ContrSat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:15: undefined reference to `Controleur::Controleur()'
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:15: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o: In function `ContrSat::~ContrSat()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:23: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o: In function `ContrSat::~ContrSat()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:23: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o:(.rodata._ZTC8ContrSat16_10Controleur[_ZTV8ContrSat]+0x10): undefined reference to `typeinfo for Controleur'
+./src/ControleurSat.o:(.rodata._ZTC8ContrSat16_10Controleur[_ZTV8ContrSat]+0x50): undefined reference to `typeinfo for Controleur'
+./src/ControleurSat.o:(.rodata._ZTI8ContrSat[_ZTI8ContrSat]+0x18): undefined reference to `typeinfo for Controleur'
+collect2: error: ld returned 1 exit status
+make: *** [PCOO-Projet] Error 1
+12:46:30 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+12:49:34 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building file: ../src/ControleurOnOff.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurOnOff.d" -MT"src/ControleurOnOff.o" -o "src/ControleurOnOff.o" "../src/ControleurOnOff.cpp"
+Finished building: ../src/ControleurOnOff.cpp
+ 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/ControleurSat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurSat.d" -MT"src/ControleurSat.o" -o "src/ControleurSat.o" "../src/ControleurSat.cpp"
+Finished building: ../src/ControleurSat.cpp
+ 
+Building file: ../src/Etat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Etat.d" -MT"src/Etat.o" -o "src/Etat.o" "../src/Etat.cpp"
+Finished building: ../src/Etat.cpp
+ 
+Building file: ../src/Phenimp.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
+Finished building: ../src/Phenimp.cpp
+ 
+Building file: ../src/Phenomene.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenomene.d" -MT"src/Phenomene.o" -o "src/Phenomene.o" "../src/Phenomene.cpp"
+Finished building: ../src/Phenomene.cpp
+ 
+Building file: ../src/Phenrand.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
+Finished building: ../src/Phenrand.cpp
+ 
+Building file: ../src/Phensin.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
+Finished building: ../src/Phensin.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+12:50:35 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+./src/ControleurOnOff.o: In function `ContrOnOff::ContrOnOff(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::Controleur()'
+./src/ControleurP.o: In function `ContrP::ContrP(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::Controleur()'
+./src/ControleurSat.o: In function `ContrSat::ContrSat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:15: undefined reference to `Controleur::Controleur()'
+collect2: error: ld returned 1 exit status
+makefile:45: recipe for target 'PCOO-Projet' failed
+make: *** [PCOO-Projet] Error 1
+12:50:46 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+12:51:48 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+In file included from ../src/Controleur.cpp:8:0:
+../src/Controleur.h:18:2: error: initializer specified for non-virtual method ‘Controleur::Controleur()’
+  Controleur() = 0;
+  ^
+src/subdir.mk:57: recipe for target 'src/Controleur.o' failed
+make: *** [src/Controleur.o] Error 1
+12:52:10 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+In file included from ../src/Controleur.cpp:8:0:
+../src/Controleur.h:18:25: error: constructors cannot be declared virtual [-fpermissive]
+  virtual Controleur() = 0;
+                         ^
+../src/Controleur.h:18:10: error: initializer specified for non-virtual method ‘Controleur::Controleur()’
+  virtual Controleur() = 0;
+          ^
+src/subdir.mk:57: recipe for target 'src/Controleur.o' failed
+make: *** [src/Controleur.o] Error 1
+12:52:18 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+In file included from ../src/Controleur.cpp:8:0:
+../src/Controleur.h:18:2: error: initializer specified for non-virtual method ‘Controleur::Controleur()’
+  Controleur() = 0;
+  ^
+src/subdir.mk:57: recipe for target 'src/Controleur.o' failed
+make: *** [src/Controleur.o] Error 1
+12:52:26 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building file: ../src/ControleurOnOff.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurOnOff.d" -MT"src/ControleurOnOff.o" -o "src/ControleurOnOff.o" "../src/ControleurOnOff.cpp"
+Finished building: ../src/ControleurOnOff.cpp
+ 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/ControleurSat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurSat.d" -MT"src/ControleurSat.o" -o "src/ControleurSat.o" "../src/ControleurSat.cpp"
+Finished building: ../src/ControleurSat.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+./src/ControleurOnOff.o: In function `ContrOnOff::ContrOnOff(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::Controleur()'
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::ContrP(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::Controleur()'
+makefile:45: recipe for target 'PCOO-Projet' failed
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::~ContrP()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::~ContrP()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o: In function `ContrSat::ContrSat(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:15: undefined reference to `Controleur::Controleur()'
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:15: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o: In function `ContrSat::~ContrSat()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:23: undefined reference to `Controleur::~Controleur()'
+./src/ControleurSat.o: In function `ContrSat::~ContrSat()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurSat.cpp:23: undefined reference to `Controleur::~Controleur()'
+collect2: error: ld returned 1 exit status
+make: *** [PCOO-Projet] Error 1
+12:53:59 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+./src/ControleurOnOff.o: In function `ContrOnOff::ContrOnOff(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:15: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurOnOff.o: In function `ContrOnOff::~ContrOnOff()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurOnOff.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::ContrP(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Etat*, Serveur*, double, double)':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:17: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o: In function `ContrP::~ContrP()':
+/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: undefined reference to `Controleur::~Controleur()'
+./src/ControleurP.o:/home/d01000100/Documents/Dropbox/EPFL/Passerelle/POO/Old/PCOO-Projet/Debug/../src/ControleurP.cpp:26: more undefined references to `Controleur::~Controleur()' follow
+makefile:45: recipe for target 'PCOO-Projet' failed
+collect2: error: ld returned 1 exit status
+make: *** [PCOO-Projet] Error 1
+12:54:13 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 

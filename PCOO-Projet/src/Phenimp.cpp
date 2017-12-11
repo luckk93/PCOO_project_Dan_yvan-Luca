@@ -7,8 +7,8 @@
 
 #include "Phenimp.h"
 
-Phen_imp::Phen_imp() {
-}
+// Phen_imp::Phen_imp() {
+// }
 
 Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double random, double min, double max,  double u, double o){
 	name = n;

@@ -15,7 +15,7 @@
 
 class Controleur: virtual public Process {
 public:
-	Controleur();
+	Controleur() = 0;
 	virtual ~Controleur() = 0;
 	virtual void run();
 protected:

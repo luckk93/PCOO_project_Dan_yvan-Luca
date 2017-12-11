@@ -9,8 +9,8 @@
 
 using namespace std;
 
-ContrOnOff::ContrOnOff() {
-}
+// ContrOnOff::ContrOnOff() {
+// }
 
 ContrOnOff::ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax){
 	etat = e;

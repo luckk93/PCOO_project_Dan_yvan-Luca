@@ -12,7 +12,7 @@
 using namespace std;
 class Phen_sin : virtual public Phenomene {
 public:
-	Phen_sin();
+	// Phen_sin();
 	Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double random, double min, double max,  double u, double o);
 	virtual ~Phen_sin();
 private:

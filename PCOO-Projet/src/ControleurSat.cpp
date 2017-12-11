@@ -9,8 +9,8 @@
 
 using namespace std;
 
-ContrSat::ContrSat() {
-}
+// ContrSat::ContrSat() {
+// }
 
 ContrSat::ContrSat(string n,Etat*e,Serveur*s,double sat){
 	etat = e;

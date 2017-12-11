@@ -11,8 +11,8 @@
 
 using namespace std;
 
-ContrP::ContrP() {
-}
+// ContrP::ContrP() {
+// }
 
 ContrP::ContrP(string n,Etat*e,Serveur*s,double val_o, double g){
 	etat = e;
