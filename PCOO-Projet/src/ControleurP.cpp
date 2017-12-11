@@ -14,11 +14,12 @@ using namespace std;
 ContrP::ContrP() {
 }
 
-ContrP::ContrP(Etat*e,Serveur*s,double val_o, double g){
+ContrP::ContrP(string n,Etat*e,Serveur*s,double val_o, double g){
 	etat = e;
 	serveur = s;
 	valOrder = val_o;
 	gain=g;
+	name=n;
 	serveur->log("Controller initialized...\n");
 }
 

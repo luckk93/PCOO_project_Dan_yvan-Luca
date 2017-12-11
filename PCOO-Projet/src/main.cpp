@@ -65,7 +65,7 @@ int main(){
 	Etat etat(INIT_TEMP,I_PHEN,I_CTRL,&serv);
 	serv.log("Etat created and Initialised...\n");
 
-	Phen_rand phenr(&etat, &serv, VAL_MIN, VAL_MAX);
+	Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX);
 
 	Phen_sin phens(&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
                 VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX);
@@ -76,11 +76,11 @@ int main(){
 	serv.log("Phenomene created and Initialised...\n");
 
 	//ctrl.init(&etat,&serv,CTRL_SAT);
-	ContrSat ctrls(&etat,&serv,CTRL_SAT);
+	ContrSat ctrls("Ctrl Sat",&etat,&serv,CTRL_SAT);
 
-	ContrOnOff ctrlo(&etat,&serv,CTRL_TMIN, CTRL_TMAX, CTRL_VMIN, CTRL_VMAX);
+	ContrOnOff ctrlo("Ctrl On/Off",&etat,&serv,CTRL_TMIN, CTRL_TMAX, CTRL_VMIN, CTRL_VMAX);
 
-    ContrP ctrlp(&etat,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
+    ContrP ctrlp("Ctrl P",&etat,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
 
 	serv.log("Controller created and Initialised...\n");
 

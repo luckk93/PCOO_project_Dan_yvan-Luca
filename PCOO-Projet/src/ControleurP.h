@@ -11,14 +11,14 @@
 #include <iostream>
 
 #include "Controleur.h"
-
+using namespace std;
 class ContrP: virtual public Controleur {
 public:
 	ContrP();
-	ContrP(Etat*e,Serveur*s,double val_o, double g);
+	ContrP(string n,Etat*e,Serveur*s,double val_o, double g);
 	virtual ~ContrP();
 private:
-    double valOrder, gain, errorP;
+	double valOrder, gain, errorP;
 	virtual void compute_valCtrl();
 };
 

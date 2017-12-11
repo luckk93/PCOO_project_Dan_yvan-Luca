@@ -9,11 +9,11 @@
 #define SRC_PHENRAND_H_
 
 #include "Phenomene.h"
-
+using namespace std;
 class Phen_rand: virtual public Phenomene {
 public:
 	Phen_rand();
-	Phen_rand(Etat*e, Serveur*s, double min, double max);
+	Phen_rand(string n,Etat*e, Serveur*s, double min, double max);
 	virtual ~Phen_rand();
 private:
 	double valMin;
