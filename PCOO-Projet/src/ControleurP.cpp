@@ -28,6 +28,6 @@ ContrP::~ContrP() {
 
 void ContrP::compute_valCtrl(){
     errorP = (valEtat - valOrder);
-	valCtrl= valEtat - (errorP * gain);
+	valCtrl= valCtrl - (errorP * gain);
 }
 

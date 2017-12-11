@@ -10,7 +10,7 @@
 Phen_imp::Phen_imp() {
 }
 
-Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double random, double min, double max){
+Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double random, double min, double max,  double u, double o){
 	name = n;
 	etat = e;
 	serveur = s;
@@ -28,14 +28,20 @@ Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, l
 
 	sat_min = min;
 	sat_max =max;
+
+	mu = u;
+	sigma = o;
 }
 
 Phen_imp::~Phen_imp() {
 }
 
 double Phen_imp::generateRand(){
-	return rand_ampl*(((double)(rand())/RAND_MAX)-0.5);
-}
+    double x1=0, x2=0, y;
+    while(x1==0) x1= ((double)(rand())/RAND_MAX);
+    while(x2==0) x2= ((double)(rand())/RAND_MAX);
+    y=sqrt((-2)*log(x1)) * cos (2*PI*x2);
+	return mu + y * sigma;}
 
 double Phen_imp::generate(){
 	long int period_tick = (tick - t_del);
