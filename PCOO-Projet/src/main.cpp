@@ -31,8 +31,10 @@ int main(){
     const double CTRL_P_ORDER = 19.0;
     const double CTRL_P_GAIN = 2.0;
 
-    const double RAND1_MU = 20;
+    const double RAND1_MU = 20.0;
     const double RAND1_SIGMA = 0.2;
+    const double RAND2_MU = 0.0;
+    const double RAND2_SIGMA = 1.0;
 
 
 	const double VAL_MIN = 20; // Minimum value of the phenomenon
@@ -70,10 +72,10 @@ int main(){
 	Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX, RAND1_MU, RAND1_SIGMA);
 
 	Phen_sin phens("Phen sin",&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
-                VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX);
+                VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX, RAND2_MU, RAND2_SIGMA);
 
     Phen_imp pheni("Phen imp",&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
-                   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_RAND_AMPL, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX);
+                   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_RAND_AMPL, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX, RAND2_MU, RAND2_SIGMA);
 
 	serv.log("Phenomene created and Initialised...\n");
 
@@ -87,7 +89,7 @@ int main(){
 	serv.log("Controller created and Initialised...\n");
 
 	vector<Process*> elements;
-	elements.push_back(&phenr);
+	elements.push_back(&pheni);
 	elements.push_back(&ctrlp);
 	elements.push_back(&etat);
 	elements.push_back(&serv);
