@@ -19,7 +19,9 @@ int main(){
 	const double INIT_TEMP = 20.0; // Initial temperature
 	const double I_PHEN = 0.1; // Influence factor from phenomenon to state
 	const double I_CTRL = 0.8; // Influence factor from controller to state
+
 	const int NB_TICKS = 50; // Duration of the simulation
+	const string TIME_UNIT = "s";
 
 	const double CTRL_SAT = 24.0; // Saturation value of the controller
 
@@ -62,7 +64,7 @@ int main(){
 	cout << "-i-\tBuilding actors\n";
 
 	// Create and init the  server
-	Serveur serv;
+	Serveur serv("Serveur");
 	// serv.log("Server created and Initialised.\n");
 
 	// Declare actors
@@ -97,11 +99,11 @@ int main(){
 	elements.push_back(&serv);
 
 	// Run the simulation
-	// serv.log("Starting simulation\n");
+	serv.log("Starting simulation\n");
 
-	Simulator mySimulator(NB_TICKS, &elements);
+	Simulator mySimulator(NB_TICKS, TIME_UNIT, &elements);
 	mySimulator.simulate();
-	// serv.log("End simulation...\n");
+	serv.log("End simulation...\n");
 
 	// Plot the output
 	serv.log("Use gnuplot to plot the output\n");

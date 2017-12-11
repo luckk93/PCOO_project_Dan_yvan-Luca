@@ -8,9 +8,16 @@
 #include "Simulator.h"
 
 
-Simulator::Simulator(int tick_nbr, vector<Process*>* elements) {
+Simulator::Simulator(int tick_nbr, string t, vector<Process*>* elements) {
     sim_lenght=tick_nbr;
     processes=elements;
+    time_unit = t;
+    cout << "-i-\tSimulator created\n";
+    cout << "\ttick max = " << sim_lenght << ", time_unit = " << time_unit << "\n";
+    int index = 0;
+    for(Process*p : *processes){
+    	cout << "\tProcess '" << p->getName() << "' scheduled at position " << index++ << "\n";
+	}
 }
 
 Simulator::~Simulator() {

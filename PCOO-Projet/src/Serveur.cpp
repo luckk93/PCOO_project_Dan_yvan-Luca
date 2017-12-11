@@ -7,9 +7,8 @@
 
 #include "Serveur.h"
 
-using namespace std;
-
-Serveur::Serveur(){
+Serveur::Serveur(string n){
+	name = n;
 	tick = 0;
 	// initlogcall(this);
 	// ofstream data_storage;
