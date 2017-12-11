@@ -7,7 +7,7 @@
 
 #include "Phenrand.h"
 
-#define <cmath>
+#include <cmath>
 
 Phen_rand::Phen_rand() {
 }
@@ -28,10 +28,10 @@ Phen_rand::~Phen_rand() {
 }
 
 double Phen_rand::generate(){
-    double x1=0, x2=0;
+    double x1=0, x2=0, y;
     while(x1==0) x1= ((double)(rand())/RAND_MAX);
     while(x2==0) x2= ((double)(rand())/RAND_MAX);
-
-	return valMin + (valMax - valMin)*((double)(rand())/RAND_MAX);
+    y=sqrt((-2)*log(x1)) * cos (2*PI*x2);
+	return mu + y * sigma;
 }
 
