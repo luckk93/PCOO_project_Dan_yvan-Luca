@@ -2274,3 +2274,25 @@ Invoking: GCC C++ Linker
 g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
 Finished building target: PCOO-Projet
  
+11:43:42 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Phensin.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
+Finished building: ../src/Phensin.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/logcall.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 

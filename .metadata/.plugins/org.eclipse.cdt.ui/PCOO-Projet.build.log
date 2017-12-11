@@ -1,20 +1,5 @@
-11:35:15 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+11:43:42 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
-Building file: ../src/Phenimp.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
-Finished building: ../src/Phenimp.cpp
- 
-Building file: ../src/Phenomene.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenomene.d" -MT"src/Phenomene.o" -o "src/Phenomene.o" "../src/Phenomene.cpp"
-Finished building: ../src/Phenomene.cpp
- 
-Building file: ../src/Phenrand.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
-Finished building: ../src/Phenrand.cpp
- 
 Building file: ../src/Phensin.cpp
 Invoking: GCC C++ Compiler
 g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
@@ -36,5 +21,5 @@ g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/Controle
 Finished building target: PCOO-Projet
  
 
-11:35:16 Build Finished (took 1s.567ms)
+11:43:43 Build Finished (took 861ms)
 
