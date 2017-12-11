@@ -8,8 +8,6 @@
 #ifndef SRC_PHENOMENE_H_
 #define SRC_PHENOMENE_H_
 
-#define PI 3.1416
-
 
 #include <cstdlib>
 #include <time.h>
@@ -17,6 +15,8 @@
 
 #include "Process.h"
 #include "Etat.h"
+
+const double PI = 3.1416;
 
 class Phenomene: public Process{
 public:

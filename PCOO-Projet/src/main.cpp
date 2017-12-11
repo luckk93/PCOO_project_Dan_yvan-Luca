@@ -62,7 +62,7 @@ int main(){
 	serv.log("Server created and Initialised.\n");
 
 	// Declare actors
-	Etat etat(INIT_TEMP,I_PHEN,I_CTRL,&serv);
+	Etat etat("Etat",INIT_TEMP,I_PHEN,I_CTRL,&serv);
 	serv.log("Etat created and Initialised...\n");
 
 	Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX);
@@ -70,7 +70,7 @@ int main(){
 	Phen_sin phens(&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
                 VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX);
 
-    Phen_imp pheni(&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
+    Phen_imp pheni("Phen imp",&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
                    VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_RAND_AMPL, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX);
 
 	serv.log("Phenomene created and Initialised...\n");

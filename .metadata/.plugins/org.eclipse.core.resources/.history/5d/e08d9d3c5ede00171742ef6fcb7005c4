@@ -12,7 +12,7 @@
 
 #include "Process.h"
 #include "Serveur.h"
-using namespace std;
+
 class Etat: virtual public Process {
 public:
 	Etat();
