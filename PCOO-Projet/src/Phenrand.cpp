@@ -7,6 +7,8 @@
 
 #include "Phenrand.h"
 
+#define <cmath>
+
 Phen_rand::Phen_rand() {
 }
 
