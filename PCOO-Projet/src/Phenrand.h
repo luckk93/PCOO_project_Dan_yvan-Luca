@@ -16,8 +16,10 @@ public:
 	Phen_rand(string n,Etat*e, Serveur*s, double min, double max);
 	virtual ~Phen_rand();
 private:
-	double valMin;
-	double valMax;
+	double satMin;
+	double satMax;
+	double mu;
+	double sigma;
 	double generate();
 };
 
