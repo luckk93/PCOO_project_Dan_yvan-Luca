@@ -1,14 +1,9 @@
-11:43:42 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+11:57:16 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
-Building file: ../src/Phensin.cpp
+Building file: ../src/Serveur.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
-Finished building: ../src/Phensin.cpp
- 
-Building file: ../src/Simulator.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
-Finished building: ../src/Simulator.cpp
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serveur.d" -MT"src/Serveur.o" -o "src/Serveur.o" "../src/Serveur.cpp"
+Finished building: ../src/Serveur.cpp
  
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
@@ -21,5 +16,5 @@ g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/Controle
 Finished building target: PCOO-Projet
  
 
-11:43:43 Build Finished (took 861ms)
+11:57:16 Build Finished (took 612ms)
 

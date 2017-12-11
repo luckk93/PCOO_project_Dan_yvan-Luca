@@ -55,15 +55,15 @@ int main(){
     const double VAL_IMP_SAT_MIN = -50;
 	const double VAL_IMP_SAT_MAX =50;
 
-	//Process p;
+	cout << "-i- Building actors\n";
 
 	// Create and init the  server
 	Serveur serv;
-	serv.log("Server created and Initialised.\n");
+	// serv.log("Server created and Initialised.\n");
 
 	// Declare actors
 	Etat etat("Etat",INIT_TEMP,I_PHEN,I_CTRL,&serv);
-	serv.log("Etat created and Initialised...\n");
+	// serv.log("Etat created and Initialised...\n");
 
 	Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX);
 
@@ -73,7 +73,7 @@ int main(){
     Phen_imp pheni("Phen imp",&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
                    VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_RAND_AMPL, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX);
 
-	serv.log("Phenomene created and Initialised...\n");
+	// serv.log("Phenomene created and Initialised...\n");
 
 	//ctrl.init(&etat,&serv,CTRL_SAT);
 	ContrSat ctrls("Ctrl Sat",&etat,&serv,CTRL_SAT);
@@ -82,7 +82,7 @@ int main(){
 
     ContrP ctrlp("Ctrl P",&etat,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
 
-	serv.log("Controller created and Initialised...\n");
+	// serv.log("Controller created and Initialised...\n");
 
 	vector<Process*> elements;
 	elements.push_back(&pheni);
@@ -91,11 +91,11 @@ int main(){
 	elements.push_back(&serv);
 
 	// Run the simulation
-	serv.log("Starting simulation\n");
+	// serv.log("Starting simulation\n");
 
 	Simulator mySimulator(NB_TICKS, &elements);
 	mySimulator.simulate();
-	serv.log("End simulation...\n");
+	// serv.log("End simulation...\n");
 
 	// Plot the output
 	serv.log("Use gnuplot to plot the output\n");

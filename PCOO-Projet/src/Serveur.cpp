@@ -38,10 +38,10 @@ void Serveur::run(){
 }
 
 void Serveur::write_data(){
-	cout << left <<  "Tick: "  << setw(5) << tick << "\t" ;
-	cout << left <<  "Phen: "  << setw(5) << valPhen << "\t" ;
-	cout << left <<  "Etat: "  << setw(5) << valEtat << "\t" ;
-	cout << left <<  "Ctrl: "  << setw(5) << valCtrl << endl ;
+	// cout << left <<  "Tick: "  << setw(5) << tick << "\t" ;
+	// cout << left <<  "Phen: "  << setw(5) << valPhen << "\t" ;
+	// cout << left <<  "Etat: "  << setw(5) << valEtat << "\t" ;
+	// cout << left <<  "Ctrl: "  << setw(5) << valCtrl << endl ;
 
 	// ofstream data_storage;
 	// data_storage.open("waveforms.dat", ios::out | ios::app | ios::binary);
