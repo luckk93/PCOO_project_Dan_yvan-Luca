@@ -6,9 +6,19 @@
  */
 
 #include "Etat.h"
+#include "logcall.h"
+
 
 using namespace std;
 Etat::Etat() {
+}
+
+Etat::Etat(double e, double p, double c, Serveur*s){
+	etat_courant = e;
+	I_phen = p;
+	I_ctrl = c;
+	serveur = s;
+	serveur->log("Etat initialized...\n");
 }
 
 Etat::~Etat() {
@@ -22,12 +32,4 @@ void Etat::calcule(){
 void Etat::run(){
 	serveur->log("Etat running...\n");
 	calcule();
-}
-
-void Etat::init(double e, double p, double c, Serveur*s){
-	etat_courant = e;
-	I_phen = p;
-	I_ctrl = c;
-	serveur = s;
-	serveur->log("Etat initialized...\n");
 }

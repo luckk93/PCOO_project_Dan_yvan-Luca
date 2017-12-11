@@ -13,6 +13,7 @@
 class Phen_rand: virtual public Phenomene {
 public:
 	Phen_rand();
+	Phen_rand(Etat*e, Serveur*s, double min, double max);
 	virtual ~Phen_rand();
 private:
 	double valMin;

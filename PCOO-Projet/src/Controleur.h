@@ -18,15 +18,14 @@ public:
 	Controleur();
 	virtual ~Controleur();
 	virtual void run();
-	virtual void init(Etat*,Serveur*,double);
-private:
+protected:
 	Serveur*serveur;
 	Etat*etat;
-	double valPhen, valEtat, valCtrl, valSat;
+	double valPhen, valEtat, valCtrl;
 	void send_valPhen();
 	void send_valEtat();
 	void send_valCtrl();
-	void compute_valCtrl();
+	virtual void compute_valCtrl() = 0;
 };
 
 #endif /* SRC_CONTROLEUR_H_ */

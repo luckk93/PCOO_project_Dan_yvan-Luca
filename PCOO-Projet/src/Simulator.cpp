@@ -8,7 +8,9 @@
 #include "Simulator.h"
 
 
-Simulator::Simulator() {
+Simulator::Simulator(int tick_nbr, std::vector<Process*>* elements) {
+    sim_lenght=tick_nbr;
+    processes=elements;
 }
 
 Simulator::~Simulator() {
@@ -20,15 +22,7 @@ void Simulator::tick(){
 	}
 }
 
-void Simulator::init(){
-}
-
-void Simulator::simulate(int tick_nbr){
-	init();
-	for(int i=0; i<tick_nbr; i++)
+void Simulator::simulate(){
+	for(int i=0; i<sim_lenght; i++)
 		tick();
-}
-
-void Simulator::init_process(std::vector<Process*>* elements){
-	processes=elements;
 }

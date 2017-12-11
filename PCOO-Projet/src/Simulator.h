@@ -16,16 +16,24 @@
 #include "Serveur.h"
 #include "Process.h"
 
+#include "Phenrand.h"
+#include "Phensin.h"
+#include "Phenimp.h"
+
+#include "ControleurSat.h"
+#include "ControleurOnOff.h"
+#include "ControleurP.h"
+
 class Simulator {
 public:
 	Simulator();
+	Simulator(int tick_nbr, std::vector<Process*>* elements);
 	virtual ~Simulator();
-	void simulate(int);
-	void init_process(std::vector<Process*>* elements);
+	void simulate();
 private:
 	std::vector<Process*>* processes;
 	void tick();
-	void init();
+	int sim_lenght;
 };
 
 #endif /* SRC_SIMULATOR_H_ */

@@ -25,7 +25,7 @@ public:
 	void store_etat(double v){valEtat = v;};
 	void log(std::string);
 	virtual void run();
-	virtual void init();
+	void init();
 private:
 	double valPhen, valCtrl, valEtat;
 	std::string logPath;

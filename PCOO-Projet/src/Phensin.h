@@ -10,21 +10,24 @@
 
 #include "Phenomene.h"
 
-class Phen_sin : Phenomene {
+class Phen_sin : virtual public Phenomene {
 public:
 	Phen_sin();
+	Phen_sin(Etat*e, Serveur*s, double a, double b, long int c, long int d, double random, double min, double max);
 	virtual ~Phen_sin();
 private:
+    double generateRand();
 	double generate();
-	long long int tick=0;
-	int signal_select=0;
-	
+
 	double offs =0;
 	double ampl =1;
 	long int phase=0;
-	// long int period=10;
+    long int period=10;
+
+    double rand_ampl=0.5;
+
+    double sat_min = -50;
 	double sat_max =50;
-	double sat_min = -50;
 };
 
 #endif /* SRC_PHENSIN_H_ */

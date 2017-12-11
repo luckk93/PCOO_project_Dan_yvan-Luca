@@ -15,7 +15,6 @@
 #include <time.h>
 #include <cmath>
 
-
 #include "Process.h"
 #include "Etat.h"
 
@@ -26,33 +25,10 @@ public:
 	void run()override;
 	void init(Etat*e,double min,double max,Serveur*s);
 protected:
-	double generateImp();
-	double generateSin();
-	double generateRand();
 	Serveur*serveur;
 	Etat *etat;
-	double generate();
-	double valMin;
-	double valMax;
-	
+	virtual double generate() = 0;
 	long long int tick=0;
-	int signal_select=0;
-	
-	double offs =0;
-	double ampl =1;
-	long int phase=0;
-	// long int period=10;
-	double sat_max =50;
-	double sat_min = -50;
-	
-	double v_low =0;
-	double v_high = 10;
-	long int t_del= 3;
-	long int t_rise= 3;
-	long int pwidth = 5;
-	long int t_fall= 3;
-	long int period = 13;
-	
 };
 
 #endif /* SRC_PHENOMENE_H_ */

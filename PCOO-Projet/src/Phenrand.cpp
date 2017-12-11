@@ -10,6 +10,15 @@
 Phen_rand::Phen_rand() {
 }
 
+Phen_rand::Phen_rand(Etat*e, Serveur*s, double min, double max){
+	etat = e;
+	srand(time(0));
+	valMin = min;
+	valMax = max;
+	serveur = s;
+	serveur->log("Phenomene initialized...\n");
+}
+
 Phen_rand::~Phen_rand() {
 }
 

@@ -12,6 +12,8 @@
 #include "Process.h"
 #include "Simulator.h"
 
+#include "logcall.h"
+
 using namespace std;
 
 int main(){
@@ -19,45 +21,86 @@ int main(){
 	const double I_PHEN = 0.1; // Influence factor from phenomenon to state
 	const double I_CTRL = 0.8; // Influence factor from controller to state
 	const int NB_TICKS = 50; // Duration of the simulation
+
 	const double CTRL_SAT = 24.0; // Saturation value of the controller
-	const double VAL_MIN = 20; // Minimum value of the phenomenon 
+
+    const double CTRL_TMIN = 19.0;
+    const double CTRL_TMAX = 20.0;
+    const double CTRL_VMIN = 5.0;
+    const double CTRL_VMAX = 50.0;
+
+    const double CTRL_P_ORDER = 19.0;
+    const double CTRL_P_GAIN = 2.0;
+
+
+
+	const double VAL_MIN = 20; // Minimum value of the phenomenon
 	const double VAL_MAX = 30; // Maximum value of the phenomenon
+
+	const double VAL_SIN_OFFS = 0;
+	const double VAL_SIN_AMPL = 10;
+	const long int VAL_SIN_PHASE = 0;
+    const long int VAL_SIN_PERIOD = 10;
+    const double VAL_RAND_AMPL = 0.1;
+	const double VAL_SIN_SAT_MIN = -50;
+	const double VAL_SIN_SAT_MAX = 50;
+
+	const double VAL_IMP_LOW =0;
+	const double VAL_IMP_HIGH = 10;
+	const long int VAL_IMP_DEL= 3;
+	const long int VAL_IMP_RISE= 3;
+	const long int VAL_IMP_WIDTH = 5;
+	const long int VAL_IMP_FALL= 3;
+	const long int VAL_IMP_PERIOD = 13;
+    const double VAL_IMP_RAND_AMPL=0.5;
+    const double VAL_IMP_SAT_MIN = -50;
+	const double VAL_IMP_SAT_MAX =50;
 
 	//Process p;
 
 	// Create and init the  server
 	Serveur serv;
-	serv.init();
-	serv.log("Server created and Initialised.\n");
-	
+	log("Server created and Initialised.\n");
+
 	// Declare actors
-	Etat etat;
-	etat.init(INIT_TEMP,I_PHEN,I_CTRL,&serv);
-	serv.log("Etat created and Initialised...\n");
+	Etat etat(INIT_TEMP,I_PHEN,I_CTRL,&serv);
+	log("Etat created and Initialised...\n");
 
-	Phenomene phen;
-	phen.init(&etat,VAL_MIN,VAL_MAX,&serv);
-	serv.log("Phenomene created and Initialised...\n");
+	Phen_rand phenr(&etat, &serv, VAL_MIN, VAL_MAX);
 
-	Controleur ctrl;
-	ctrl.init(&etat,&serv,CTRL_SAT);
-	serv.log("Controller created and Initialised...\n");
+	Phen_sin phens(&etat, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
+                VAL_SIN_PERIOD, VAL_RAND_AMPL, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX);
+
+    Phen_imp pheni(&etat, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
+                   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_RAND_AMPL, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX);
+
+	log("Phenomene created and Initialised...\n");
+
+	//Controleur ctrl;
+	//ctrl.init(&etat,&serv,CTRL_SAT);
+	ContrSat ctrls(&etat,&serv,CTRL_SAT);
+
+	ContrOnOff ctrlo(&etat,&serv,CTRL_TMIN, CTRL_TMAX, CTRL_VMIN, CTRL_VMAX);
+
+    ContrP ctrlp(&etat,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
+
+	log("Controller created and Initialised...\n");
 
 	vector<Process*> elements;
-	elements.push_back(&phen);
-	elements.push_back(&ctrl);
+	elements.push_back(&phenr);
+	elements.push_back(&ctrlp);
 	elements.push_back(&etat);
 	elements.push_back(&serv);
 
 	// Run the simulation
-	serv.log("Starting simulation\n");
-	Simulator mySimulator;
-	mySimulator.init_process(&elements);
-	mySimulator.simulate(NB_TICKS);
-	serv.log("End simulation...\n");
+	log("Starting simulation\n");
+
+	Simulator mySimulator(NB_TICKS, &elements);
+	mySimulator.simulate();
+	log("End simulation...\n");
 
 	// Plot the output
-	serv.log("Plotting output with gnuplot\n");
+	log("Use gnuplot to plot the output\n");
 	// system("gnuplot ../plot.sh");
 
 

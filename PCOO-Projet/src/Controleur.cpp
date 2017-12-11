@@ -6,6 +6,7 @@
  */
 
 #include "Controleur.h"
+#include "logcall.h"
 
 using namespace std;
 
@@ -36,21 +37,4 @@ void Controleur::send_valEtat(){
 void Controleur::send_valCtrl(){
 	serveur->store_ctrl(valCtrl);
 	etat->store_ctrl(valCtrl);
-}
-
-void Controleur::compute_valCtrl(){
-	// On/Off controller
-	if(valPhen > valSat){
-		valCtrl = valSat;
-	}
-	else{
-		valCtrl = valPhen;
-	}
-}
-
-void Controleur::init(Etat*e,Serveur*s,double sat){
-	etat = e;
-	serveur = s;
-	valSat = sat;
-	serveur->log("Controller initialized...\n");
 }

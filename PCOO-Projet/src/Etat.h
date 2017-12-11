@@ -16,13 +16,13 @@
 class Etat: virtual public Process {
 public:
 	Etat();
+	Etat(double e, double p, double c,Serveur*s);
 	virtual ~Etat();
 	void store_phen(double v){val_phen = v;};
 	void store_ctrl(double v){val_ctrl = v;};
 	double get_valPhen(){return val_phen;};
 	double get_etatCourant(){return etat_courant;};
 	virtual void run();
-	virtual void init(double e, double p, double c,Serveur*s);
 private:
 	Serveur*serveur;
 	double etat_effectif;
