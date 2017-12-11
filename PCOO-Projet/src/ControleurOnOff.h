@@ -11,11 +11,11 @@
 #include <iostream>
 
 #include "Controleur.h"
-
+using namespace std;
 class ContrOnOff: virtual public Controleur {
 public:
 	ContrOnOff();
-	ContrOnOff(Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax);
+	ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax);
 	virtual ~ContrOnOff();
 private:
     double trigMin, trigMax, valMin, valMax;

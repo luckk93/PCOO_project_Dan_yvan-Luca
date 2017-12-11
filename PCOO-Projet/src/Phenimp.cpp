@@ -12,11 +12,11 @@ Phen_imp::Phen_imp() {
 
 Phen_imp::Phen_imp(Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double random, double min, double max){
 
-    etat = e;
+	etat = e;
 	serveur = s;
 	srand(time(0));
 
-    v_low =a;
+	v_low =a;
 	v_high = b;
 	t_del= c;
 	t_rise= d;
@@ -24,9 +24,9 @@ Phen_imp::Phen_imp(Etat*e, Serveur*s, double a, double b, long int c, long int d
 	t_fall= g;
 	period = h;
 
-    rand_ampl=random;
+	rand_ampl=random;
 
-    sat_min = min;
+	sat_min = min;
 	sat_max =max;
 }
 
@@ -38,13 +38,15 @@ double Phen_imp::generateRand(){
 }
 
 double Phen_imp::generate(){
-	long int period_tick = (tick - t_del + 1) % period;
+	long int period_tick = (tick - t_del);
+	period_tick++;
+	period_tick %= period;
 	double imp_point;
 
 	if(period_tick < 0) imp_point = v_low;
-	else if(period_tick <= t_rise) imp_point = ((v_high-v_low)/t_rise)*period_tick;
+	else if(period_tick <= t_rise) imp_point = (((v_high-v_low)/t_rise)*period_tick) + v_low;
 	else if(period_tick < (t_rise+pwidth)) imp_point = v_high;
-    else if(period_tick < (t_rise+pwidth+t_fall)) imp_point = v_high-((v_high-v_low)/t_fall)*(period_tick-(t_rise+pwidth));
+	else if(period_tick < (t_rise+pwidth+t_fall)) imp_point = v_high-((v_high-v_low)/t_fall)*(period_tick-(t_rise+pwidth));
 	else imp_point = v_low;
 
 	double wave_point = (imp_point + generateRand());

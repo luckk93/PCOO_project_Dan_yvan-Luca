@@ -1,0 +1,65 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Nov 20, 2017
+ *      Author: d01000100
+ */
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "Process.h"
+#include "Simulator.h"
+
+using namespace std;
+
+int main(){
+	const double INIT_TEMP = 20.0; // Initial temperature
+	const double I_PHEN = 0.1; // Influence factor from phenomenon to state
+	const double I_CTRL = 0.8; // Influence factor from controller to state
+	const int NB_TICKS = 50; // Duration of the simulation
+	const double CTRL_SAT = 24.0; // Saturation value of the controller
+	const double VAL_MIN = 20; // Minimum value of the phenomenon 
+	const double VAL_MAX = 30; // Maximum value of the phenomenon
+
+	/7Process p;
+
+	// Create and init the  server
+	Serveur serv;
+	serv.init();
+	serv.log("Server created and Initialised.\n");
+	
+	// Declare actors
+	Etat etat;
+	etat.init(INIT_TEMP,I_PHEN,I_CTRL,&serv);
+	serv.log("Etat created and Initialised...\n");
+
+	Phenomene phen;
+	phen.init(&etat,VAL_MIN,VAL_MAX,&serv);
+	serv.log("Phenomene created and Initialised...\n");
+
+	Controleur ctrl;
+	ctrl.init(&etat,&serv,CTRL_SAT);
+	serv.log("Controller created and Initialised...\n");
+
+	vector<Process*> elements;
+	elements.push_back(&phen);
+	elements.push_back(&ctrl);
+	elements.push_back(&etat);
+	elements.push_back(&serv);
+
+	// Run the simulation
+	serv.log("Starting simulation\n");
+	Simulator mySimulator;
+	mySimulator.init_process(&elements);
+	mySimulator.simulate(NB_TICKS);
+	serv.log("End simulation...\n");
+
+	// Plot the output
+	serv.log("Plotting output with gnuplot\n");
+	// system("gnuplot ../plot.sh");
+
+
+	return 0;
+}

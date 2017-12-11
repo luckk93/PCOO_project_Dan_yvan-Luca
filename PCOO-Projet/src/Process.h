@@ -16,7 +16,7 @@ public:
 	virtual ~Process();
 	virtual void run() = 0;
 	// virtual void init() = 0;
-private:
+protected:
 	std::string name;
 };
 

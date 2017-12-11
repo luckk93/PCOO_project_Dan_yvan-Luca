@@ -6,17 +6,17 @@
  */
 
 #include "ControleurSat.h"
-#include "logcall.h"
 
 using namespace std;
 
 ContrSat::ContrSat() {
 }
 
-ContrSat::ContrSat(Etat*e,Serveur*s,double sat){
+ContrSat::ContrSat(string n,Etat*e,Serveur*s,double sat){
 	etat = e;
 	serveur = s;
 	valSat = sat;
+	name = n;
 	serveur->log("Controller initialized...\n");
 }
 

@@ -6,8 +6,6 @@
  */
 
 #include "Etat.h"
-#include "logcall.h"
-
 
 using namespace std;
 Etat::Etat() {

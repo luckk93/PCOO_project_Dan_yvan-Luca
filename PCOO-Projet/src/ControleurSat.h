@@ -11,11 +11,11 @@
 #include <iostream>
 
 #include "Controleur.h"
-
+using namespace std;
 class ContrSat: virtual public Controleur {
 public:
 	ContrSat();
-	ContrSat(Etat*e,Serveur*s,double sat);
+	ContrSat(string n,Etat*e,Serveur*s,double sat);
 	virtual ~ContrSat();
 private:
     double valSat;

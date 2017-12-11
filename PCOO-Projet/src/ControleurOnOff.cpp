@@ -6,20 +6,20 @@
  */
 
 #include "ControleurOnOff.h"
-#include "logcall.h"
 
 using namespace std;
 
 ContrOnOff::ContrOnOff() {
 }
 
-ContrOnOff::ContrOnOff(Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax){
+ContrOnOff::ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax){
 	etat = e;
 	serveur = s;
 	trigMin = tmin;
 	trigMax = tmax;
 	valMin= vmin;
 	valMax= vmax;
+	name = n;
 	serveur->log("Controller initialized...\n");
 }
 

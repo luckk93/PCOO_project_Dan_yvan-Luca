@@ -6,7 +6,6 @@
  */
 
 #include "Controleur.h"
-#include "logcall.h"
 
 using namespace std;
 
