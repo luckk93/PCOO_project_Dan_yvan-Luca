@@ -6,7 +6,6 @@
  */
 
 #include "Phenomene.h"
-#include "logcall.h"
 
 Phenomene::Phenomene(){
 }

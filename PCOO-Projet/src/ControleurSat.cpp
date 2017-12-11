@@ -6,7 +6,6 @@
  */
 
 #include "ControleurSat.h"
-#include "logcall.h"
 
 using namespace std;
 

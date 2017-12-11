@@ -6,7 +6,6 @@
  */
 
 #include "ControleurOnOff.h"
-#include "logcall.h"
 
 using namespace std;
 

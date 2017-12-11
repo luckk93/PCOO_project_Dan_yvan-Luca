@@ -6,7 +6,6 @@
  */
 
 #include "ControleurP.h"
-#include "logcall.h"
 
 #include <iostream>
 

@@ -27,6 +27,8 @@ public:
 	virtual void run();
 	void init();
 private:
+	std::ofstream data_storage;
+	std::ofstream log_storage;
 	double valPhen, valCtrl, valEtat;
 	std::string logPath;
 	void write_data();
