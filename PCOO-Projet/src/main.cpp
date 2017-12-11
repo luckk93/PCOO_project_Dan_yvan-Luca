@@ -59,7 +59,7 @@ int main(){
     const double VAL_IMP_SAT_MIN = -50;
 	const double VAL_IMP_SAT_MAX =50;
 
-	cout << "-i- Building actors\n";
+	cout << "-i-\tBuilding actors\n";
 
 	// Create and init the  server
 	Serveur serv;
@@ -88,6 +88,8 @@ int main(){
 
 	// serv.log("Controller created and Initialised...\n");
 
+	cout << "-i-\tBuilding actors done\n";
+
 	vector<Process*> elements;
 	elements.push_back(&pheni);
 	elements.push_back(&ctrlp);
@@ -103,7 +105,7 @@ int main(){
 
 	// Plot the output
 	serv.log("Use gnuplot to plot the output\n");
-	system("gnuplot ../plot.sh");
+	// system("gnuplot ../plot.sh");
 
 
 	return 0;

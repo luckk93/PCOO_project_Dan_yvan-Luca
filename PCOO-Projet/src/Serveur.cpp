@@ -64,5 +64,5 @@ void Serveur::log(string s){
 	// log_storage.open("journal.log", ios::out | ios::app | ios::binary);
 	log_storage << s;
 	// log_storage.close();
-	cout << s;
+	// cout << s;
 }
