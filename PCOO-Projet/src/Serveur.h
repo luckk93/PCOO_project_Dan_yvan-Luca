@@ -20,9 +20,9 @@ class Serveur: public Process {
 public:
 	Serveur();
 	virtual ~Serveur();
-	void store_phen(double v){valPhen = v;};
-	void store_ctrl(double v){valCtrl = v;};
-	void store_etat(double v){valEtat = v;};
+	void store_phen(double v){buffer << std::setw(10)<< v << "\t";};
+	void store_ctrl(double v){buffer << std::setw(10)<< v << "\t";};
+	void store_etat(double v){buffer << std::setw(10)<< v << "\t";};
 	void log(std::string);
 	virtual void run();
 	void init();
@@ -31,6 +31,8 @@ private:
 	std::ofstream log_storage;
 	double valPhen, valCtrl, valEtat;
 	std::string logPath;
+	std::string str;
+	std::ostringstream buffer;
 	void write_data();
 	int tick;
 };

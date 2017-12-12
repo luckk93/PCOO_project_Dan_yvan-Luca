@@ -103,7 +103,7 @@ int main(){
 
 	// Plot the output
 	serv.log("Use gnuplot to plot the output\n");
-	system("gnuplot ../plot.sh");
+	// system("gnuplot ../plot.sh");
 
 
 	return 0;
