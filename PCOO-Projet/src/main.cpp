@@ -94,9 +94,5 @@ int main(){
 	mySimulator.simulate();
 	serv.log("End simulation...\n");
 
-	// Plot the output
-	//serv.log("Use gnuplot to plot the output\n");
-	system("gnuplot ../plot.sh");
-
 	return 0;
 }
