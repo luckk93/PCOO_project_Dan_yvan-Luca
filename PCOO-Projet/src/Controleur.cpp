@@ -9,12 +9,6 @@
 
 using namespace std;
 
-// Controleur::Controleur() {
-// }
-
-// Controleur::~Controleur() {
-// }
-
 void Controleur::run(){
 	send_valPhen();
 	send_valEtat();

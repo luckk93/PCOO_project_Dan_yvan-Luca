@@ -8,8 +8,6 @@
 #include "Etat.h"
 
 using namespace std;
-// Etat::Etat() {
-// }
 
 Etat::Etat(string n, double e, double p, double c, Serveur*s){
 	etat_courant = e;

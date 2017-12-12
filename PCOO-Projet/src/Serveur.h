@@ -28,7 +28,6 @@ public:
 	void log(string);
 
 	virtual void run();
-	void init();
 private:
 	ofstream data_storage;
 	ofstream log_storage;

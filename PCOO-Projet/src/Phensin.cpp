@@ -7,9 +7,6 @@
 
 #include "Phensin.h"
 
-// Phen_sin::Phen_sin() {
-// }
-
 Phen_sin::Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double min, double max,  double u, double o){
 	name = n;
     etat = e;

@@ -15,7 +15,6 @@
 using namespace std;
 class Etat: virtual public Process {
 public:
-	// Etat();
 	Etat(string n, double e, double p, double c,Serveur*s);
 	virtual ~Etat();
 	void store_phen(double v){val_phen = v;};

@@ -21,10 +21,8 @@ const double PI = 3.1416;
 
 class Phenomene: public Process{
 public:
-	// Phenomene();
-	// ~Phenomene();
 	virtual void run();
-	void init(Etat*e,double min,double max,Serveur*s);
+	// void init(Etat*e,double min,double max,Serveur*s);
 protected:
 	Serveur*serveur;
 	Etat *etat;

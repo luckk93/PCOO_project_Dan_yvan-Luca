@@ -12,7 +12,6 @@
 using namespace std;
 class Phen_rand: virtual public Phenomene {
 public:
-	// Phen_rand();
 	Phen_rand(string n,Etat*e, Serveur*s, double min, double max, double u, double o);
 	virtual ~Phen_rand();
 private:

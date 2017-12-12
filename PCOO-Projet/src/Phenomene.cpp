@@ -7,12 +7,6 @@
 
 #include "Phenomene.h"
 
-// Phenomene::Phenomene(){
-// }
-
-// Phenomene::~Phenomene(){
-// }
-
 void Phenomene::run(){
     double value=generate();
 	etat->store_phen(value);

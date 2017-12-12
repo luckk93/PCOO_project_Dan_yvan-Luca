@@ -14,7 +14,6 @@
 using namespace std;
 class ContrP: virtual public Controleur {
 public:
-	// ContrP();
 	ContrP(string n,Etat*e,Serveur*s,double val_o, double g);
 	virtual ~ContrP();
 private:

@@ -19,7 +19,6 @@ public:
 	virtual ~Process();
 	virtual void run() = 0;
 	string getName(){return name;};
-	// virtual void init() = 0;
 protected:
 	string name;
 	ostringstream logstring;

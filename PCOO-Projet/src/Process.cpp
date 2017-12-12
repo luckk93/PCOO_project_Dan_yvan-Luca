@@ -12,9 +12,3 @@ Process::Process() {
 
 Process::~Process() {
 }
-
-// void Process::run(){
-// }
-
-// void Process::init(){
-// }

@@ -1,3 +1,179 @@
-21:23:51 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+21:30:37 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
 make: Nothing to be done for 'all'.
+21:32:43 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building file: ../src/ControleurOnOff.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurOnOff.d" -MT"src/ControleurOnOff.o" -o "src/ControleurOnOff.o" "../src/ControleurOnOff.cpp"
+Finished building: ../src/ControleurOnOff.cpp
+ 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/ControleurSat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurSat.d" -MT"src/ControleurSat.o" -o "src/ControleurSat.o" "../src/ControleurSat.cpp"
+Finished building: ../src/ControleurSat.cpp
+ 
+Building file: ../src/Etat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Etat.d" -MT"src/Etat.o" -o "src/Etat.o" "../src/Etat.cpp"
+Finished building: ../src/Etat.cpp
+ 
+Building file: ../src/Phenimp.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
+Finished building: ../src/Phenimp.cpp
+ 
+Building file: ../src/Phenomene.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenomene.d" -MT"src/Phenomene.o" -o "src/Phenomene.o" "../src/Phenomene.cpp"
+Finished building: ../src/Phenomene.cpp
+ 
+Building file: ../src/Phenrand.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
+Finished building: ../src/Phenrand.cpp
+ 
+Building file: ../src/Phensin.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
+Finished building: ../src/Phensin.cpp
+ 
+Building file: ../src/Serveur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serveur.d" -MT"src/Serveur.o" -o "src/Serveur.o" "../src/Serveur.cpp"
+Finished building: ../src/Serveur.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+21:33:06 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Phenimp.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
+Finished building: ../src/Phenimp.cpp
+ 
+Building file: ../src/Phenomene.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenomene.d" -MT"src/Phenomene.o" -o "src/Phenomene.o" "../src/Phenomene.cpp"
+Finished building: ../src/Phenomene.cpp
+ 
+Building file: ../src/Phenrand.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
+Finished building: ../src/Phenrand.cpp
+ 
+Building file: ../src/Phensin.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
+Finished building: ../src/Phensin.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
+21:34:57 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+make all 
+Building file: ../src/Controleur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controleur.d" -MT"src/Controleur.o" -o "src/Controleur.o" "../src/Controleur.cpp"
+Finished building: ../src/Controleur.cpp
+ 
+Building file: ../src/ControleurOnOff.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurOnOff.d" -MT"src/ControleurOnOff.o" -o "src/ControleurOnOff.o" "../src/ControleurOnOff.cpp"
+Finished building: ../src/ControleurOnOff.cpp
+ 
+Building file: ../src/ControleurP.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
+Finished building: ../src/ControleurP.cpp
+ 
+Building file: ../src/ControleurSat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurSat.d" -MT"src/ControleurSat.o" -o "src/ControleurSat.o" "../src/ControleurSat.cpp"
+Finished building: ../src/ControleurSat.cpp
+ 
+Building file: ../src/Etat.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Etat.d" -MT"src/Etat.o" -o "src/Etat.o" "../src/Etat.cpp"
+Finished building: ../src/Etat.cpp
+ 
+Building file: ../src/Phenimp.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
+Finished building: ../src/Phenimp.cpp
+ 
+Building file: ../src/Phenomene.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenomene.d" -MT"src/Phenomene.o" -o "src/Phenomene.o" "../src/Phenomene.cpp"
+Finished building: ../src/Phenomene.cpp
+ 
+Building file: ../src/Phenrand.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
+Finished building: ../src/Phenrand.cpp
+ 
+Building file: ../src/Phensin.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phensin.d" -MT"src/Phensin.o" -o "src/Phensin.o" "../src/Phensin.cpp"
+Finished building: ../src/Phensin.cpp
+ 
+Building file: ../src/Process.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Process.d" -MT"src/Process.o" -o "src/Process.o" "../src/Process.cpp"
+Finished building: ../src/Process.cpp
+ 
+Building file: ../src/Serveur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serveur.d" -MT"src/Serveur.o" -o "src/Serveur.o" "../src/Serveur.cpp"
+Finished building: ../src/Serveur.cpp
+ 
+Building file: ../src/Simulator.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
+Finished building: ../src/Simulator.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: PCOO-Projet
+Invoking: GCC C++ Linker
+g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/ControleurP.o ./src/ControleurSat.o ./src/Etat.o ./src/Phenimp.o ./src/Phenomene.o ./src/Phenrand.o ./src/Phensin.o ./src/Process.o ./src/Serveur.o ./src/Simulator.o ./src/main.o   
+Finished building target: PCOO-Projet
+ 
