@@ -51,10 +51,10 @@ void Serveur::run(){
 
 void Serveur::write_data(){
 
-    data_storage << setw(6)<< tick << "\t" << buffer.str() << endl;
     logstring.str("");
 	logstring.clear();
     logstring << "[" <<name << "]\ttick = " << tick << ", Contenent of buffer: " << buffer.str() << endl;
+    data_storage << setw(6)<< tick << "\t" << buffer.str() << endl;
     log(logstring.str());
     buffer.str("");
     buffer.clear();

@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <time.h>
 #include <cmath>
+#include <cassert>
 
 #include "Process.h"
 #include "Etat.h"

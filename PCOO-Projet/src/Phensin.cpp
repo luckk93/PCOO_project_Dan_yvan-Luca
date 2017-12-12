@@ -24,6 +24,9 @@ Phen_sin::Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, l
 	sat_min = min;
 	sat_max =max;
 
+	assert(phase >= 0.0);
+	assert(period >= 0.0);
+
 	mu = u;
 	sigma = o;
 

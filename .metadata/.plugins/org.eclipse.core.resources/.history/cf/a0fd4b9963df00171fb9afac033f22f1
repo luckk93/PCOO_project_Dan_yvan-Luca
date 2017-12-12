@@ -51,15 +51,26 @@ int main(){
 	const double RAND1_SIGMA = 1.0;
 
 	// Phenomenon parameters of the pH
+	// const double VAL_IMP_LOW =5;
+	// const double VAL_IMP_HIGH = 10;
+	// const long int VAL_IMP_DEL= 3;
+	// const long int VAL_IMP_RISE= 3;
+	// const long int VAL_IMP_WIDTH = 45;
+	// const long int VAL_IMP_FALL= 3;
+	// const long int VAL_IMP_PERIOD = 90;
+	// const double VAL_IMP_SAT_MIN = 14;
+	// const double VAL_IMP_SAT_MAX =0;
+	// const double RAND2_MU = 0.0;
+	// const double RAND2_SIGMA = 1.0;
 	const double VAL_IMP_LOW = 6.0;
-	const double VAL_IMP_HIGH = 8.0;
+	const double VAL_IMP_HIGH = 7.0;
 	const long int VAL_IMP_DEL= 0;
 	const long int VAL_IMP_RISE= 1;
 	const long int VAL_IMP_WIDTH = 23;
 	const long int VAL_IMP_FALL= 1;
 	const long int VAL_IMP_PERIOD = 48;
-	const double VAL_IMP_SAT_MIN = 0.0;
-	const double VAL_IMP_SAT_MAX = 14.0;
+	const double VAL_IMP_SAT_MIN = 14.0;
+	const double VAL_IMP_SAT_MAX = 0.0;
 	const double RAND2_MU = 0.0;
 	const double RAND2_SIGMA = 1.0;
 
@@ -72,11 +83,16 @@ int main(){
 	Etat etat_temp("Etat temp",INIT_TEMP,I_PHEN_TEMP,I_CTRL_TEMP,&serv);
 	Etat etat_ph("Etat pH",INIT_PH,I_PHEN_PH,I_CTRL_PH,&serv);
 
+	//Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX, RAND1_MU, RAND1_SIGMA);
+
 	Phen_sin phen_temp("Phen temp",&etat_temp, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
 				VAL_SIN_PERIOD, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX, RAND1_MU, RAND1_SIGMA);
 
 	Phen_imp phen_ph("Phen ph",&etat_ph, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
 				   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX, RAND2_MU, RAND2_SIGMA);
+
+
+	//ContrSat ctrls("Ctrl Sat",&etat,&serv,CTRL_SAT);
 
 	ContrOnOff ctrl_temp("Ctrl temp",&etat_temp,&serv,CTRL_TMIN, CTRL_TMAX, CTRL_VMIN, CTRL_VMAX);
 

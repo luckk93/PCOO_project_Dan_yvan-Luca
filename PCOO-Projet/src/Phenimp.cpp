@@ -30,6 +30,14 @@ Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, l
 	mu = u;
 	sigma = o;
 
+	assert(t_del >= 0.0);
+	assert(t_rise >= 0.0);
+	assert(t_del >= 0.0);
+	assert(pwidth >= 0.0);
+	assert(t_fall >= 0.0);
+	assert(period >= 0.0);
+
+
 	logstring.str("");
 	logstring.clear();
 	logstring << "[" <<name << "]  Creation" << endl;
