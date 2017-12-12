@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <iomanip>
-#include <sstream>
 
 using namespace std;
 class Process {
@@ -22,7 +21,7 @@ public:
 	// virtual void init() = 0;
 protected:
 	string name;
-	ostringstream logstring;
+	std::ostringstream logstring;
 };
 
 #endif /* SRC_PROCESS_H_ */
