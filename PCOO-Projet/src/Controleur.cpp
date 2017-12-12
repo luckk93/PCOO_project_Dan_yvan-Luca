@@ -16,11 +16,17 @@ Controleur::~Controleur() {
 }
 
 void Controleur::run(){
-	serveur->log("Controller running...\n");
 	send_valPhen();
 	send_valEtat();
 	compute_valCtrl();
 	send_valCtrl();
+
+	logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  tick = " << tick << ", phen_val = " << valPhen << ", state_val = " << valEtat << ", ctrl_val = " << valCtrl << endl;
+	serveur->log(logstring.str());
+
+	tick++;
 }
 
 void Controleur::send_valPhen(){

@@ -7,10 +7,10 @@
 
 #include "Phenimp.h"
 
-Phen_imp::Phen_imp() {
-}
+// Phen_imp::Phen_imp() {
+// }
 
-Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double random, double min, double max,  double u, double o){
+Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double min, double max,  double u, double o){
 	name = n;
 	etat = e;
 	serveur = s;
@@ -24,13 +24,23 @@ Phen_imp::Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, l
 	t_fall= g;
 	period = h;
 
-	rand_ampl=random;
-
 	sat_min = min;
 	sat_max =max;
 
 	mu = u;
 	sigma = o;
+
+	logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "\tInitialization of random seed" << endl;
+	logstring << "\tImpulsion low level= " << v_low << ", Impulsion low level = " << v_high << endl;
+    logstring << "\tImpulsion rise time= " << t_rise << ", Impulsion fall time = " << t_fall << endl;
+    logstring << "\tImpulsion high width= " << pwidth << ", Impulsion period = " << period << endl;
+    logstring << "\tImpulsion delay= " << t_del <<  endl;
+    logstring << "\tSat_min= " << sat_min << ", Sat_max = " << sat_max << endl;
+    logstring << "\tmu = " << mu << ", sigma = " << sigma << endl;
+	serveur->log(logstring.str());
 }
 
 Phen_imp::~Phen_imp() {

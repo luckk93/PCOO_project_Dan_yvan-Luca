@@ -11,8 +11,8 @@
 
 using namespace std;
 
-ContrP::ContrP() {
-}
+// ContrP::ContrP() {
+// }
 
 ContrP::ContrP(string n,Etat*e,Serveur*s,double val_o, double g){
 	etat = e;
@@ -20,7 +20,12 @@ ContrP::ContrP(string n,Etat*e,Serveur*s,double val_o, double g){
 	valOrder = val_o;
 	gain=g;
 	name=n;
-	serveur->log("Controller initialized...\n");
+
+	logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "\tOrder_val= " << valOrder << ", P_gain= " << gain << endl;
+	serveur->log(logstring.str());
 }
 
 ContrP::~ContrP() {

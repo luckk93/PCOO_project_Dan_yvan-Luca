@@ -8,8 +8,8 @@
 #include "Etat.h"
 
 using namespace std;
-Etat::Etat() {
-}
+// Etat::Etat() {
+// }
 
 Etat::Etat(string n, double e, double p, double c, Serveur*s){
 	etat_courant = e;
@@ -17,7 +17,13 @@ Etat::Etat(string n, double e, double p, double c, Serveur*s){
 	I_ctrl = c;
 	serveur = s;
 	name = n;
-	serveur->log("Etat initialized...\n");
+
+	logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "\tphen_factor = " << I_phen << " ctrl_factor = " << I_ctrl << endl;
+    logstring << "\tphen_val = " << val_phen << ", ctrl_val = " << val_ctrl << ", state_val = " << etat_courant << endl;
+	serveur->log(logstring.str());
 }
 
 Etat::~Etat() {
@@ -29,6 +35,12 @@ void Etat::calcule(){
 }
 
 void Etat::run(){
-	serveur->log("Etat running...\n");
 	calcule();
+
+    logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  tick = " << tick << ", state_val = " << etat_courant << endl;
+	serveur->log(logstring.str());
+
+	tick++;
 }

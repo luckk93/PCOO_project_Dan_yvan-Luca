@@ -15,7 +15,7 @@
 using namespace std;
 class Etat: virtual public Process {
 public:
-	Etat();
+	// Etat();
 	Etat(string n, double e, double p, double c,Serveur*s);
 	virtual ~Etat();
 	void store_phen(double v){val_phen = v;};
@@ -25,13 +25,14 @@ public:
 	virtual void run();
 private:
 	Serveur*serveur;
-	double etat_effectif;
-	double etat_courant;
-	double I_phen;
-	double I_ctrl;
-	double val_phen;
-	double val_ctrl;
+	double etat_effectif=0;
+	double etat_courant=0;
+	double I_phen=0;
+	double I_ctrl=0;
+	double val_phen=0;
+	double val_ctrl=0;
 	void calcule();
+    long long int tick=0;
 };
 
 #endif /* SRC_ETAT_H_ */

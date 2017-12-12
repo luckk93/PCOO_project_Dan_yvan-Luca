@@ -14,7 +14,7 @@
 using namespace std;
 class ContrSat: virtual public Controleur {
 public:
-	ContrSat();
+	// ContrSat();
 	ContrSat(string n,Etat*e,Serveur*s,double sat);
 	virtual ~ContrSat();
 private:

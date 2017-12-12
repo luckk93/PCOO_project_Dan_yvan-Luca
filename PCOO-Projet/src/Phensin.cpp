@@ -7,10 +7,10 @@
 
 #include "Phensin.h"
 
-Phen_sin::Phen_sin() {
-}
+// Phen_sin::Phen_sin() {
+// }
 
-Phen_sin::Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double random, double min, double max,  double u, double o){
+Phen_sin::Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double min, double max,  double u, double o){
 	name = n;
     etat = e;
 	serveur = s;
@@ -21,15 +21,21 @@ Phen_sin::Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, l
 	phase=c;
     period=d;
 
-    rand_ampl=random;
-
 	sat_min = min;
 	sat_max =max;
 
 	mu = u;
 	sigma = o;
 
-	serveur->log("Phenomene initialized...\n");
+	logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "\tInitialization of random seed" << endl;
+	logstring << "\tSinus offset= " << offs << ", Sinus aplitude = " << ampl << endl;
+    logstring << "\tSinus phase= " << phase << ", Sinus period = " << period << endl;
+	logstring << "\tSat_min= " << sat_min << ", Sat_max = " << sat_max << endl;
+    logstring << "\tmu = " << mu << ", sigma = " << sigma << endl;
+	serveur->log(logstring.str());
 }
 
 Phen_sin::~Phen_sin() {

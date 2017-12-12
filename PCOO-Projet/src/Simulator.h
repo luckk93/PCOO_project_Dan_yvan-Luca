@@ -24,14 +24,17 @@
 #include "ControleurOnOff.h"
 #include "ControleurP.h"
 
+using namespace std;
+
 class Simulator {
 public:
 	Simulator();
-	Simulator(int tick_nbr, std::vector<Process*>* elements);
+	Simulator(int tick_nbr, string t, vector<Process*>* elements);
 	virtual ~Simulator();
 	void simulate();
 private:
-	std::vector<Process*>* processes;
+	string time_unit;
+	vector<Process*>* processes;
 	void tick();
 	int sim_lenght;
 };

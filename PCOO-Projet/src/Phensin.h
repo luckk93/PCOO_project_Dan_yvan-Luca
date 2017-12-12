@@ -12,8 +12,8 @@
 using namespace std;
 class Phen_sin : virtual public Phenomene {
 public:
-	Phen_sin();
-	Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double random, double min, double max,  double u, double o);
+	// Phen_sin();
+	Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double min, double max,  double u, double o);
 	virtual ~Phen_sin();
 private:
     double generateRand();
@@ -23,8 +23,6 @@ private:
 	double ampl =1;
 	long int phase=0;
     long int period=10;
-
-    double rand_ampl=0.5;
 
     double sat_min = -50;
 	double sat_max =50;

@@ -15,7 +15,7 @@
 
 class Controleur: virtual public Process {
 public:
-	Controleur();
+	Controleur() = 0;
 	virtual ~Controleur() = 0;
 	virtual void run();
 protected:
@@ -26,7 +26,6 @@ protected:
 	void send_valEtat();
 	void send_valCtrl();
 	virtual void compute_valCtrl() = 0;
-	long long int tick=0;
 };
 
 #endif /* SRC_CONTROLEUR_H_ */

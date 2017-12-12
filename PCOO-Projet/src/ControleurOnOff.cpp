@@ -9,8 +9,8 @@
 
 using namespace std;
 
-ContrOnOff::ContrOnOff() {
-}
+// ContrOnOff::ContrOnOff() {
+// }
 
 ContrOnOff::ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax){
 	etat = e;
@@ -20,8 +20,14 @@ ContrOnOff::ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, doubl
 	valMin= vmin;
 	valMax= vmax;
 	name = n;
-	serveur->log("Controller initialized...\n");
-}
+
+    logstring.str("");
+	logstring.clear();
+	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "\tTrig_min= " << trigMin << ", Trig_max= " << trigMax << endl;
+    logstring << "\tValue_min= " << valMin << ", Value_max= " << valMax << endl;
+	serveur->log(logstring.str());
+	}
 
 ContrOnOff::~ContrOnOff() {
 }
