@@ -48,7 +48,6 @@ void Serveur::run(){
 }
 
 void Serveur::write_data(){
-
 	logstring.str("");
 	logstring.clear();
 	logstring << "[" <<name << "]\ttick = " << tick << ", Contenent of buffer: " << buffer.str() << endl;
@@ -56,7 +55,6 @@ void Serveur::write_data(){
 	log(logstring.str());
 	buffer.str("");
 	buffer.clear();
-
 }
 
 void Serveur::log(string s){
