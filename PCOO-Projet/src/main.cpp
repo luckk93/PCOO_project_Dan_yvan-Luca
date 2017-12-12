@@ -51,15 +51,26 @@ int main(){
 	const double RAND1_SIGMA = 1.0;
 
 	// Phenomenon parameters of the pH
-	const double VAL_IMP_LOW =5;
-	const double VAL_IMP_HIGH = 10;
-	const long int VAL_IMP_DEL= 3;
-	const long int VAL_IMP_RISE= 3;
-	const long int VAL_IMP_WIDTH = 45;
-	const long int VAL_IMP_FALL= 3;
-	const long int VAL_IMP_PERIOD = 90;
-	const double VAL_IMP_SAT_MIN = 14;
-	const double VAL_IMP_SAT_MAX =0;
+	// const double VAL_IMP_LOW =5;
+	// const double VAL_IMP_HIGH = 10;
+	// const long int VAL_IMP_DEL= 3;
+	// const long int VAL_IMP_RISE= 3;
+	// const long int VAL_IMP_WIDTH = 45;
+	// const long int VAL_IMP_FALL= 3;
+	// const long int VAL_IMP_PERIOD = 90;
+	// const double VAL_IMP_SAT_MIN = 14;
+	// const double VAL_IMP_SAT_MAX =0;
+	// const double RAND2_MU = 0.0;
+	// const double RAND2_SIGMA = 1.0;
+	const double VAL_IMP_LOW = 6.0;
+	const double VAL_IMP_HIGH = 7.0;
+	const long int VAL_IMP_DEL= 0;
+	const long int VAL_IMP_RISE= 1;
+	const long int VAL_IMP_WIDTH = 23;
+	const long int VAL_IMP_FALL= 1;
+	const long int VAL_IMP_PERIOD = 48;
+	const double VAL_IMP_SAT_MIN = 14.0;
+	const double VAL_IMP_SAT_MAX = 0.0;
 	const double RAND2_MU = 0.0;
 	const double RAND2_SIGMA = 1.0;
 
