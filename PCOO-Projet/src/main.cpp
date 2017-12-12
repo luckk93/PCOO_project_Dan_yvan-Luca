@@ -16,42 +16,41 @@
 using namespace std;
 
 int main(){
-	const double INIT_TEMP = 20.0; // Initial temperature
-	const double INIT_PH = 7.0; // Initial pH
-	const double I_PHEN_TEMP = 0.1; // Influence factor from phenomenon to state
-	const double I_CTRL_TEMP = 0.05; // Influence factor from controller to state
-	const double I_PHEN_PH = 0.1; // Influence factor from phenomenon to state
-	const double I_CTRL_PH = 0.2; // Influence factor from controller to state
-
+	// Simulation parameters
 	const int NB_TICKS = 192; // Duration of the simulation
 	const string TIME_UNIT = "15 min";
 
-	//const double CTRL_SAT = 24.0; // Saturation value of the controller
+	// Etat parameter of the chamber
+	const double INIT_TEMP = 20.0; // Initial temperature
+	const double I_PHEN_TEMP = 0.1; // Influence factor from phenomenon to state
+	const double I_CTRL_TEMP = 0.05; // Influence factor from controller to state
 
-    const double CTRL_TMIN = 19.0;
-    const double CTRL_TMAX = 20.0;
-    const double CTRL_VMIN = 5.0;
-    const double CTRL_VMAX = 50.0;
+	// Etat parameter of the aquarium
+	const double INIT_PH = 7.0; // Initial pH
+	const double I_PHEN_PH = 0.1; // Influence factor from phenomenon to state
+	const double I_CTRL_PH = 0.2; // Influence factor from controller to state
 
-    const double CTRL_P_ORDER = 7.0;
-    const double CTRL_P_GAIN = 2.0;
+	// Controller parameters of the chamber (on/off)
+	const double CTRL_TMIN = 19.0;
+	const double CTRL_TMAX = 20.0;
+	const double CTRL_VMIN = 5.0;
+	const double CTRL_VMAX = 50.0;
 
-    const double RAND1_MU = 0.0;
-    const double RAND1_SIGMA = 1.0;
-    const double RAND2_MU = 0.0;
-    const double RAND2_SIGMA = 1.0;
+	// Controller parameters of the aquarium (P regulator)
+	const double CTRL_P_ORDER = 7.0;
+	const double CTRL_P_GAIN = 2.0;
 
-/*
-	const double VAL_MIN = 20; // Minimum value of the phenomenon
-	const double VAL_MAX = 30; // Maximum value of the phenomenon
-*/
+	// Phenomenon parameters of the temperature
 	const double VAL_SIN_OFFS = 16;
 	const double VAL_SIN_AMPL = 3;
 	const long int VAL_SIN_PHASE = 3;
-    const long int VAL_SIN_PERIOD = 90;
+	const long int VAL_SIN_PERIOD = 90;
 	const double VAL_SIN_SAT_MIN = -50;
 	const double VAL_SIN_SAT_MAX = 50;
+	const double RAND1_MU = 0.0;
+	const double RAND1_SIGMA = 1.0;
 
+	// Phenomenon parameters of the pH
 	const double VAL_IMP_LOW =5;
 	const double VAL_IMP_HIGH = 10;
 	const long int VAL_IMP_DEL= 3;
@@ -59,8 +58,10 @@ int main(){
 	const long int VAL_IMP_WIDTH = 45;
 	const long int VAL_IMP_FALL= 3;
 	const long int VAL_IMP_PERIOD = 90;
-    const double VAL_IMP_SAT_MIN = 14;
+	const double VAL_IMP_SAT_MIN = 14;
 	const double VAL_IMP_SAT_MAX =0;
+	const double RAND2_MU = 0.0;
+	const double RAND2_SIGMA = 1.0;
 
 	cout << "-i-\tBuilding actors\n";
 
@@ -74,17 +75,17 @@ int main(){
 	//Phen_rand phenr("Phen random",&etat, &serv, VAL_MIN, VAL_MAX, RAND1_MU, RAND1_SIGMA);
 
 	Phen_sin phen_temp("Phen temp",&etat_temp, &serv, VAL_SIN_OFFS, VAL_SIN_AMPL, VAL_SIN_PHASE,
-                VAL_SIN_PERIOD, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX, RAND1_MU, RAND1_SIGMA);
+				VAL_SIN_PERIOD, VAL_SIN_SAT_MIN, VAL_SIN_SAT_MAX, RAND1_MU, RAND1_SIGMA);
 
-    Phen_imp phen_ph("Phen ph",&etat_ph, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
-                   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX, RAND2_MU, RAND2_SIGMA);
+	Phen_imp phen_ph("Phen ph",&etat_ph, &serv, VAL_IMP_LOW, VAL_IMP_HIGH, VAL_IMP_DEL, VAL_IMP_RISE, VAL_IMP_WIDTH,
+				   VAL_IMP_FALL, VAL_IMP_PERIOD, VAL_IMP_SAT_MIN, VAL_IMP_SAT_MAX, RAND2_MU, RAND2_SIGMA);
 
 
 	//ContrSat ctrls("Ctrl Sat",&etat,&serv,CTRL_SAT);
 
 	ContrOnOff ctrl_temp("Ctrl temp",&etat_temp,&serv,CTRL_TMIN, CTRL_TMAX, CTRL_VMIN, CTRL_VMAX);
 
-    ContrP ctrl_ph("Ctrl ph",&etat_ph,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
+	ContrP ctrl_ph("Ctrl ph",&etat_ph,&serv,CTRL_P_ORDER, CTRL_P_GAIN);
 
 	cout << "-i-\tBuilding actors done\n";
 
