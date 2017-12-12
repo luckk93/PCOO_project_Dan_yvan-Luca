@@ -9,18 +9,15 @@
 
 using namespace std;
 
-Etat::Etat(string n, double e, double p, double c, Serveur*s){
-	etat_courant = e;
-	I_phen = p;
-	I_ctrl = c;
-	serveur = s;
+Etat::Etat(string n, double e, double p, double c, Serveur*s):etat_courant(e),I_phen(p),I_ctrl(c){
 	name = n;
+	serveur = s;
 
 	logstring.str("");
 	logstring.clear();
-	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "[" <<name << "]\tCreation" << endl;
 	logstring << "\tphen_factor = " << I_phen << " ctrl_factor = " << I_ctrl << endl;
-    logstring << "\tphen_val = " << val_phen << ", ctrl_val = " << val_ctrl << ", state_val = " << etat_courant << endl;
+	logstring << "\tphen_val = " << val_phen << ", ctrl_val = " << val_ctrl << ", state_val = " << etat_courant << endl;
 	serveur->log(logstring.str());
 }
 
@@ -35,9 +32,9 @@ void Etat::calcule(){
 void Etat::run(){
 	calcule();
 
-    logstring.str("");
+	logstring.str("");
 	logstring.clear();
-	logstring << "[" <<name << "]  tick = " << tick << ", state_val = " << etat_courant << endl;
+	logstring << "[" <<name << "]\ttick = " << tick << ", state_val = " << etat_courant << endl;
 	serveur->log(logstring.str());
 
 	tick++;

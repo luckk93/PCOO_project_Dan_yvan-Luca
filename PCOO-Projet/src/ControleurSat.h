@@ -17,7 +17,7 @@ public:
 	ContrSat(string n,Etat*e,Serveur*s,double sat);
 	virtual ~ContrSat();
 private:
-    double valSat;
+	double valSat;
 	virtual void compute_valCtrl();
 };
 

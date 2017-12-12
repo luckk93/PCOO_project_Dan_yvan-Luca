@@ -15,15 +15,15 @@ public:
 	Phen_sin(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, double min, double max,  double u, double o);
 	virtual ~Phen_sin();
 private:
-    double generateRand();
+	double generateRand();
 	double generate();
 
 	double offs =0;
 	double ampl =1;
 	long int phase=0;
-    long int period=10;
+	long int period=10;
 
-    double sat_min = -50;
+	double sat_min = -50;
 	double sat_max =50;
 
 	double mu;

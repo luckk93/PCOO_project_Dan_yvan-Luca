@@ -84,8 +84,10 @@ int main(){
 
 	cout << "-i-\tBuilding actors done\n";
 
+
 	// Run the simulation
 	serv.log("\nStarting simulation\n");
+1
 	Simulator mySimulator(NB_TICKS, TIME_UNIT);
 	mySimulator.push_back(&phen_temp);
 	mySimulator.push_back(&ctrl_temp);

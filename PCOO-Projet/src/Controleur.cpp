@@ -17,7 +17,7 @@ void Controleur::run(){
 
 	logstring.str("");
 	logstring.clear();
-	logstring << "[" <<name << "]  tick = " << tick << ", phen_val = " << valPhen << ", state_val = " << valEtat << ", ctrl_val = " << valCtrl << endl;
+	logstring << "[" <<name << "]\ttick = " << tick << ", phen_val = " << valPhen << ", state_val = " << valEtat << ", ctrl_val = " << valCtrl << endl;
 	serveur->log(logstring.str());
 
 	tick++;

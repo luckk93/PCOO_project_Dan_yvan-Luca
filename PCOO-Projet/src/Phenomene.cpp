@@ -8,12 +8,12 @@
 #include "Phenomene.h"
 
 void Phenomene::run(){
-    double value=generate();
+	double value=generate();
 	etat->store_phen(value);
 
 	logstring.str("");
 	logstring.clear();
-	logstring << "[" <<name << "]  tick = " << tick << ", val = " << value << endl;
+	logstring << "[" <<name << "]\ttick = " << tick << ", val = " << value << endl;
 	serveur->log(logstring.str());
 
 	tick++;

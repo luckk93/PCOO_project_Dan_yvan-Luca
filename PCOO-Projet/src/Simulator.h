@@ -29,12 +29,13 @@ using namespace std;
 class Simulator {
 public:
 	Simulator();
-	Simulator(int tick_nbr, string t, vector<Process*>* elements);
+	Simulator(int tick_nbr, string t);
+	void push_back(Process*p);
 	virtual ~Simulator();
 	void simulate();
 private:
 	string time_unit;
-	vector<Process*>* processes;
+	vector<Process*> processes;
 	void tick();
 	int sim_lenght;
 };

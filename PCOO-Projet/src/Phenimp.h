@@ -15,7 +15,7 @@ public:
 	Phen_imp(string n,Etat*e, Serveur*s, double a, double b, long int c, long int d, long int f, long int g, long int h, double min, double max,  double u, double o);
 	virtual ~Phen_imp();
 private:
-    double generateRand();
+	double generateRand();
 	double generate();
 
 	double v_low =0;
@@ -26,7 +26,7 @@ private:
 	long int t_fall= 3;
 	long int period = 13;
 
-    double sat_min = -50;
+	double sat_min = -50;
 	double sat_max =50;
 
 	double mu;

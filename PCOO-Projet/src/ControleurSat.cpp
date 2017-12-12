@@ -9,15 +9,15 @@
 
 using namespace std;
 
-ContrSat::ContrSat(string n,Etat*e,Serveur*s,double sat){
+ContrSat::ContrSat(string n,Etat*e,Serveur*s,double sat):valSat(sat){
+	// Inherited attributes
+	name = n;
 	etat = e;
 	serveur = s;
-	valSat = sat;
-	name = n;
 
 	logstring.str("");
 	logstring.clear();
-	logstring << "[" <<name << "]  Creation" << endl;
+	logstring << "[" <<name << "]\tCreation" << endl;
 	logstring << "\tSat_value= " << valSat << endl;
 	serveur->log(logstring.str());
 }

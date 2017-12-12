@@ -14,11 +14,10 @@
 using namespace std;
 class ContrOnOff: virtual public Controleur {
 public:
-	// ContrOnOff();
 	ContrOnOff(string n,Etat*e,Serveur*s,double tmin, double tmax, double vmin, double vmax);
 	virtual ~ContrOnOff();
 private:
-    double trigMin, trigMax, valMin, valMax;
+	double trigMin, trigMax, valMin, valMax;
 	virtual void compute_valCtrl();
 };
 

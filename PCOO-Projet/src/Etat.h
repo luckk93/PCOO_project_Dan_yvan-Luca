@@ -31,7 +31,7 @@ private:
 	double val_phen=0;
 	double val_ctrl=0;
 	void calcule();
-    long long int tick=0;
+	long long int tick=0;
 };
 
 #endif /* SRC_ETAT_H_ */

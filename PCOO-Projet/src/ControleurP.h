@@ -17,7 +17,7 @@ public:
 	ContrP(string n,Etat*e,Serveur*s,double val_o, double g);
 	virtual ~ContrP();
 private:
-	double valOrder, gain, errorP;
+	double valOrder, gain, errorP = 0;
 	virtual void compute_valCtrl();
 };
 

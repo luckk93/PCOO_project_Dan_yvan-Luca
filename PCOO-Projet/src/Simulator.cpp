@@ -8,23 +8,23 @@
 #include "Simulator.h"
 
 
-Simulator::Simulator(int tick_nbr, string t, vector<Process*>* elements) {
-    sim_lenght=tick_nbr;
-    processes=elements;
-    time_unit = t;
-    cout << "-i-\tSimulator created\n";
-    cout << "\ttick max = " << sim_lenght << ", time_unit = " << time_unit << "\n";
-    int index = 0;
-    for(Process*p : *processes){
-    	cout << "\tProcess '" << p->getName() << "' scheduled at position " << index++ << "\n";
-	}
+Simulator::Simulator(int tick_nbr, string t) {
+	sim_lenght=tick_nbr;
+	time_unit = t;
+	cout << "-i-\tSimulator created\n";
+	cout << "\ttick max = " << sim_lenght << ", time_unit = " << time_unit << "\n";
 }
 
 Simulator::~Simulator() {
 }
 
+void Simulator::push_back(Process*p){
+	processes.push_back(p);
+	cout << "\tProcess '" << p->getName() << "' scheduled at position " << processes.size()-1 << "\n";
+}
+
 void Simulator::tick(){
-	for(Process*p : *processes){
+	for(Process*p : processes){
 		p->run();
 	}
 }
