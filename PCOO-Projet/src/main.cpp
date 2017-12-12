@@ -6,12 +6,8 @@
  */
 
 #include <iostream>
-#include <string>
-#include <vector>
 
-#include "Process.h"
 #include "Simulator.h"
-
 
 using namespace std;
 

@@ -8,11 +8,9 @@
 #ifndef SRC_SERVEUR_H_
 #define SRC_SERVEUR_H_
 
-#include <iostream>
 #include <ostream>
 #include <string>
 #include <fstream>
-#include <iomanip>
 
 #include "Process.h"
 

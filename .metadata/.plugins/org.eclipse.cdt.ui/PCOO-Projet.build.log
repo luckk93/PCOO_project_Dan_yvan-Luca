@@ -1,34 +1,9 @@
-22:41:01 **** Incremental Build of configuration Debug for project PCOO-Projet ****
+23:00:07 **** Incremental Build of configuration Debug for project PCOO-Projet ****
 make all 
-Building file: ../src/ControleurOnOff.cpp
+Building file: ../src/Phenrand.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurOnOff.d" -MT"src/ControleurOnOff.o" -o "src/ControleurOnOff.o" "../src/ControleurOnOff.cpp"
-Finished building: ../src/ControleurOnOff.cpp
- 
-Building file: ../src/ControleurP.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurP.d" -MT"src/ControleurP.o" -o "src/ControleurP.o" "../src/ControleurP.cpp"
-Finished building: ../src/ControleurP.cpp
- 
-Building file: ../src/ControleurSat.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ControleurSat.d" -MT"src/ControleurSat.o" -o "src/ControleurSat.o" "../src/ControleurSat.cpp"
-Finished building: ../src/ControleurSat.cpp
- 
-Building file: ../src/Phenimp.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenimp.d" -MT"src/Phenimp.o" -o "src/Phenimp.o" "../src/Phenimp.cpp"
-Finished building: ../src/Phenimp.cpp
- 
-Building file: ../src/Serveur.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serveur.d" -MT"src/Serveur.o" -o "src/Serveur.o" "../src/Serveur.cpp"
-Finished building: ../src/Serveur.cpp
- 
-Building file: ../src/Simulator.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Simulator.d" -MT"src/Simulator.o" -o "src/Simulator.o" "../src/Simulator.cpp"
-Finished building: ../src/Simulator.cpp
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Phenrand.d" -MT"src/Phenrand.o" -o "src/Phenrand.o" "../src/Phenrand.cpp"
+Finished building: ../src/Phenrand.cpp
  
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
@@ -41,5 +16,5 @@ g++  -o "PCOO-Projet"  ./src/Controleur.o ./src/ControleurOnOff.o ./src/Controle
 Finished building target: PCOO-Projet
  
 
-22:41:03 Build Finished (took 1s.816ms)
+23:00:08 Build Finished (took 625ms)
 

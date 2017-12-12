@@ -5,9 +5,9 @@
  *      Author: d01000100
  */
 
-#include "Phenrand.h"
-
 #include <cmath>
+
+#include "Phenrand.h"
 
 Phen_rand::Phen_rand(string n,Etat*e, Serveur*s, double min, double max, double u, double o):satMin(min),satMax(max),mu(u),sigma(o){
 	// Inherited attributes

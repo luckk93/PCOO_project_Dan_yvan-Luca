@@ -8,9 +8,6 @@
 #ifndef SRC_ETAT_H_
 #define SRC_ETAT_H_
 
-#include <iostream>
-
-#include "Process.h"
 #include "Serveur.h"
 using namespace std;
 class Etat: virtual public Process {

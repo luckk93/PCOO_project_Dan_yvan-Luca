@@ -14,7 +14,6 @@
 #include <cmath>
 #include <cassert>
 
-#include "Process.h"
 #include "Etat.h"
 
 const double PI = 3.1416;
