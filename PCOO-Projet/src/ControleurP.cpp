@@ -20,6 +20,7 @@ ContrP::ContrP(string n,Etat*e,Serveur*s,double val_o, double g){
 	valOrder = val_o;
 	gain=g;
 	name=n;
+	errorP = 0;
 
 	logstring.str("");
 	logstring.clear();

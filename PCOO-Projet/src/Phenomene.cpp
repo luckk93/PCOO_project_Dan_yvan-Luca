@@ -7,11 +7,11 @@
 
 #include "Phenomene.h"
 
-Phenomene::Phenomene(){
-}
+// Phenomene::Phenomene(){
+// }
 
-Phenomene::~Phenomene(){
-}
+// Phenomene::~Phenomene(){
+// }
 
 void Phenomene::run(){
     double value=generate();

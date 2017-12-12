@@ -15,16 +15,16 @@
 
 class Controleur: virtual public Process {
 public:
-	Controleur();
-	virtual ~Controleur() = 0;
+	// Controleur();
+	// virtual ~Controleur() = 0;
 	virtual void run();
 protected:
 	Serveur*serveur;
 	Etat*etat;
 	double valPhen, valEtat, valCtrl;
-	void send_valPhen();
-	void send_valEtat();
-	void send_valCtrl();
+	virtual void send_valPhen();
+	virtual void send_valEtat();
+	virtual void send_valCtrl();
 	virtual void compute_valCtrl() = 0;
 	long long int tick=0;
 };
